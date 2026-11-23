@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import {
   ArrowRight,
   Award,
@@ -21,7 +22,12 @@ export const AboutPage: React.FC = () => {
   return (
     <div>
       {/* Page Hero */}
-      <section className="bg-brand-midnight text-white py-14 sm:py-20 border-b border-brand-amber/30 cinema-grid-bg">
+      <motion.section
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: 'easeOut' }}
+        className="bg-brand-midnight text-white py-14 sm:py-20 border-b border-brand-amber/30 cinema-grid-bg"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           <div className="lg:col-span-8 space-y-4">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-orange/20 text-brand-orange text-xs font-mono font-semibold">
@@ -56,10 +62,15 @@ export const AboutPage: React.FC = () => {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* SECTION 1: OFFICIAL GOVERNMENT ACCREDITATION VERIFICATION */}
-      <section className="py-14 sm:py-20 ivory-grid-bg">
+      <motion.section
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.1, ease: 'easeOut' }}
+        className="py-14 sm:py-20 ivory-grid-bg"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
           <div className="max-w-3xl space-y-2.5">
             <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-brand-navy font-bold">
@@ -146,10 +157,15 @@ export const AboutPage: React.FC = () => {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* SECTION 2: BRAND EMBLEM & VISUAL IDENTITY */}
-      <section className="py-14 sm:py-20 bg-brand-sand/70 border-y border-brand-navy/10">
+      <motion.section
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.2, ease: 'easeOut' }}
+        className="py-14 sm:py-20 bg-brand-sand/70 border-y border-brand-navy/10"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             <div className="lg:col-span-5 grid grid-cols-2 gap-4">
@@ -201,10 +217,15 @@ export const AboutPage: React.FC = () => {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* SECTION 3: CHRONOLOGICAL TIMELINE */}
-      <section className="py-14 sm:py-20 bg-brand-ivory">
+      <motion.section
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.3, ease: 'easeOut' }}
+        className="py-14 sm:py-20 bg-brand-ivory"
+      >
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
           <div className="text-center space-y-2">
             <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-brand-navy font-bold">
@@ -234,10 +255,15 @@ export const AboutPage: React.FC = () => {
             ))}
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* SECTION 4: CULTURAL & INSTITUTIONAL COLLABORATIONS */}
-      <section className="py-14 sm:py-20 bg-brand-navyDark text-white">
+      <motion.section
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.4, ease: 'easeOut' }}
+        className="py-14 sm:py-20 bg-brand-navyDark text-white"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
           <div className="max-w-2xl space-y-2">
             <div className="inline-flex items-center gap-2 text-xs font-mono uppercase text-brand-orange font-bold">
@@ -320,7 +346,7 @@ export const AboutPage: React.FC = () => {
             </Link>
           </div>
         </div>
-      </section>
+      </motion.section>
     </div>
   );
 };

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import {
   Award,
   CheckCircle2,
@@ -26,7 +27,12 @@ export const FacultyPage: React.FC = () => {
   return (
     <div>
       {/* Page Hero */}
-      <section className="bg-brand-navyDark text-white py-14 sm:py-20 border-b border-brand-amber/30 cinema-grid-bg">
+      <motion.section
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: 'easeOut' }}
+        className="bg-brand-navyDark text-white py-14 sm:py-20 border-b border-brand-amber/30 cinema-grid-bg"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl lg:mx-auto space-y-4">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-orange/20 text-brand-orange text-xs font-mono font-semibold">
             <GeezOrnament /> {t('FACULTY, LEADERSHIP & MASTERCLASSES', 'መምህራን፣ አመራር እና ወርክሾፖች')}
@@ -44,10 +50,15 @@ export const FacultyPage: React.FC = () => {
             )}
           </p>
         </div>
-      </section>
+      </motion.section>
 
       {/* SECTION 1: LEADERSHIP & CORE FACULTY */}
-      <section className="py-14 sm:py-20 ivory-grid-bg">
+      <motion.section
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.1, ease: 'easeOut' }}
+        className="py-14 sm:py-20 ivory-grid-bg"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
             <div className="space-y-2">
@@ -118,10 +129,15 @@ export const FacultyPage: React.FC = () => {
             })}
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* SECTION 2: INTERNATIONAL & INDUSTRY MASTERCLASSES */}
-      <section className="py-14 sm:py-20 bg-brand-midnight text-white cinema-grid-bg">
+      <motion.section
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.2, ease: 'easeOut' }}
+        className="py-14 sm:py-20 bg-brand-midnight text-white cinema-grid-bg"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
             <div className="space-y-2 max-w-2xl">
@@ -218,7 +234,7 @@ export const FacultyPage: React.FC = () => {
             </Link>
           </div>
         </div>
-      </section>
+      </motion.section>
     </div>
   );
 };

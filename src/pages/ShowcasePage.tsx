@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import {
   Award,
   CheckCircle2,
@@ -21,7 +22,12 @@ export const ShowcasePage: React.FC = () => {
   return (
     <div>
       {/* Hero Banner with Endi Award Premiere Photo */}
-      <section className="relative bg-brand-midnight text-white overflow-hidden border-b border-brand-amber/30">
+      <motion.section
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: 'easeOut' }}
+        className="relative bg-brand-midnight text-white overflow-hidden border-b border-brand-amber/30"
+      >
         <div className="absolute inset-0">
           <img
             src="/images/endi-award-premiere.jpg"
@@ -48,10 +54,15 @@ export const ShowcasePage: React.FC = () => {
             )}
           </p>
         </div>
-      </section>
+      </motion.section>
 
       {/* SECTION 1: THE ENDI AWARD 12 CATEGORIES */}
-      <section className="py-14 sm:py-20 ivory-grid-bg">
+      <motion.section
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.1, ease: 'easeOut' }}
+        className="py-14 sm:py-20 ivory-grid-bg"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
             <div className="space-y-2 max-w-2xl">
@@ -118,10 +129,15 @@ export const ShowcasePage: React.FC = () => {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* SECTION 2: MULTI-YEAR GRADUATION ARCHIVE */}
-      <section className="py-14 sm:py-20 bg-brand-sand/70 border-y border-brand-navy/10">
+      <motion.section
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.2, ease: 'easeOut' }}
+        className="py-14 sm:py-20 bg-brand-sand/70 border-y border-brand-navy/10"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
           <div className="space-y-2">
             <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-brand-navy font-bold">
@@ -179,10 +195,15 @@ export const ShowcasePage: React.FC = () => {
             ))}
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* SECTION 3: NOTABLE STUDENT WORKS & ALUMNI SPOTLIGHT */}
-      <section className="py-14 sm:py-20 bg-brand-ivory">
+      <motion.section
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.3, ease: 'easeOut' }}
+        className="py-14 sm:py-20 bg-brand-ivory"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
           <div className="space-y-2">
             <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-brand-navy font-bold">
@@ -235,7 +256,7 @@ export const ShowcasePage: React.FC = () => {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
     </div>
   );
 };

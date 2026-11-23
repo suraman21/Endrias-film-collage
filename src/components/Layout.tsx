@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import {
   Menu,
   X,
@@ -62,7 +63,12 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
   return (
     <div className="min-h-screen flex flex-col bg-brand-ivory text-brand-ink">
       {/* Top Conservatory Utility Strip */}
-      <div className="bg-brand-midnight text-white/85 border-b border-white/10 text-xs">
+      <motion.div
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, ease: 'easeOut' }}
+        className="bg-brand-midnight text-white/85 border-b border-white/10 text-xs"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex flex-wrap items-center justify-between gap-2">
           <div className="flex items-center gap-2 sm:gap-3 min-w-0">
             <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-brand-orange/20 text-brand-orange font-mono text-[11px] font-semibold shrink-0">
@@ -103,10 +109,13 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
             </a>
           </div>
         </div>
-      </div>
+      </motion.div>
 
       {/* Main Sticky Header */}
-      <header
+      <motion.header
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, ease: 'easeOut' }}
         className={`sticky top-0 z-40 transition-all duration-200 ${
           scrolled
             ? 'bg-brand-navyDark/95 backdrop-blur-md shadow-lg border-b border-brand-amber/25'
@@ -181,16 +190,31 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
             </button>
           </div>
         </div>
-      </header>
+      </motion.header>
 
       {/* Mobile / Tablet Slide-Over Navigation Drawer */}
       {mobileOpen && (
-        <div className="fixed inset-0 z-50 xl:hidden" role="dialog" aria-modal="true">
-          <div
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.25 }}
+          className="fixed inset-0 z-50 xl:hidden"
+          role="dialog"
+          aria-modal="true"
+        >
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.25 }}
             className="fixed inset-0 bg-brand-midnight/80 backdrop-blur-sm"
             onClick={() => setMobileOpen(false)}
           />
-          <div className="fixed inset-y-0 right-0 w-full max-w-sm bg-brand-midnight text-white shadow-2xl border-l border-white/10 flex flex-col">
+          <motion.div
+            initial={{ x: '100%' }}
+            animate={{ x: 0 }}
+            transition={{ type: 'spring', stiffness: 100, damping: 20, duration: 0.4 }}
+            className="fixed inset-y-0 right-0 w-full max-w-sm bg-brand-midnight text-white shadow-2xl border-l border-white/10 flex flex-col"
+          >
             <div className="p-4 sm:p-5 border-b border-white/10 flex items-center justify-between">
               <div className="flex items-center gap-3">
                 <img
@@ -275,18 +299,35 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
                 @endifilm <ArrowUpRight className="w-3.5 h-3.5" />
               </a>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       )}
 
       {/* Main Route Content */}
-      <main className="flex-1">{children}</main>
+      <motion.main
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, ease: 'easeOut' }}
+        className="flex-1"
+      >
+        {children}
+      </motion.main>
 
       {/* Film Sprocket Accent Divider */}
-      <div className="h-3 bg-brand-midnight sprocket-strip border-t border-brand-amber/30" />
+      <motion.div
+        initial={{ opacity: 0, scaleY: 0 }}
+        animate={{ opacity: 1, scaleY: 1 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        className="h-3 bg-brand-midnight sprocket-strip border-t border-brand-amber/30"
+      />
 
       {/* Conservatory Footer */}
-      <footer className="bg-brand-midnight text-white pt-16 pb-10 cinema-grid-bg">
+      <motion.footer
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: 'easeOut' }}
+        className="bg-brand-midnight text-white pt-16 pb-10 cinema-grid-bg"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-white/10">
             {/* Brand Identity Column */}
@@ -479,7 +520,7 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
             </div>
           </div>
         </div>
-      </footer>
+      </motion.footer>
     </div>
   );
 };

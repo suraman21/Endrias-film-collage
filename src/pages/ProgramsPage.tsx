@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import {
   ArrowRight,
   BookOpen,
@@ -72,7 +73,12 @@ export const ProgramsPage: React.FC = () => {
   return (
     <div>
       {/* Page Hero */}
-      <section className="bg-brand-navyDark text-white py-14 sm:py-20 border-b border-brand-amber/30 cinema-grid-bg">
+      <motion.section
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: 'easeOut' }}
+        className="bg-brand-navyDark text-white py-14 sm:py-20 border-b border-brand-amber/30 cinema-grid-bg"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl space-y-4">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-orange/20 text-brand-orange text-xs font-mono font-semibold">
@@ -92,10 +98,15 @@ export const ProgramsPage: React.FC = () => {
             </p>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* SECTION 1: PROGRAM TIERS WITH FILTER PILLS */}
-      <section className="py-14 sm:py-20 ivory-grid-bg">
+      <motion.section
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.1, ease: 'easeOut' }}
+        className="py-14 sm:py-20 ivory-grid-bg"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <h2 className="text-2xl sm:text-3xl font-extrabold text-brand-ink">
@@ -253,10 +264,15 @@ export const ProgramsPage: React.FC = () => {
             ))}
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* SECTION 2: INTERACTIVE TRACK & SHIFT RECOMMENDER */}
-      <section className="py-14 sm:py-20 bg-brand-midnight text-white">
+      <motion.section
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.2, ease: 'easeOut' }}
+        className="py-14 sm:py-20 bg-brand-midnight text-white"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="rounded-3xl bg-brand-navyDark border border-brand-amber/30 p-6 sm:p-10 shadow-cinema">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
@@ -401,10 +417,15 @@ export const ProgramsPage: React.FC = () => {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* SECTION 3: SEARCHABLE COURSE & MODULE CATALOG */}
-      <section className="py-14 sm:py-20 bg-brand-ivory">
+      <motion.section
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.3, ease: 'easeOut' }}
+        className="py-14 sm:py-20 bg-brand-ivory"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
             <div className="space-y-2">
@@ -527,7 +548,7 @@ export const ProgramsPage: React.FC = () => {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
     </div>
   );
 };

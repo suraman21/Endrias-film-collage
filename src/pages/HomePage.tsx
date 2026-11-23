@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import {
   ArrowRight,
   Award,
@@ -30,7 +31,12 @@ export const HomePage: React.FC = () => {
   return (
     <div>
       {/* HERO SECTION: Full-Bleed Addis Ababa Cinema Studio */}
-      <section className="relative bg-brand-midnight text-white overflow-hidden">
+      <motion.section
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: 'easeOut' }}
+        className="relative bg-brand-midnight text-white overflow-hidden"
+      >
         <div className="absolute inset-0">
           <img
             src="/images/hero-studio.jpg"
@@ -161,10 +167,15 @@ export const HomePage: React.FC = () => {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* KEY INSTITUTIONAL METRICS STRIP */}
-      <section className="bg-brand-navy text-white border-y border-brand-amber/30">
+      <motion.section
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.1, ease: 'easeOut' }}
+        className="bg-brand-navy text-white border-y border-brand-amber/30"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {[
@@ -203,10 +214,15 @@ export const HomePage: React.FC = () => {
             ))}
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* SECTION 1: THE 6 OFFICIAL ACADEMIC PROGRAM TIERS */}
-      <section className="py-16 sm:py-24 ivory-grid-bg">
+      <motion.section
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.2, ease: 'easeOut' }}
+        className="py-16 sm:py-24 ivory-grid-bg"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
             <div className="space-y-2.5 max-w-2xl">
@@ -336,10 +352,15 @@ export const HomePage: React.FC = () => {
             ))}
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* SECTION 2: STUDIO INFRASTRUCTURE, POST-PRODUCTION & AI CURRICULUM */}
-      <section className="py-16 sm:py-24 bg-brand-sand/70 border-y border-brand-navy/10">
+      <motion.section
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.3, ease: 'easeOut' }}
+        className="py-16 sm:py-24 bg-brand-sand/70 border-y border-brand-navy/10"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
             {/* Image Showcase */}
@@ -441,10 +462,15 @@ export const HomePage: React.FC = () => {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* SECTION 3: ENDI AWARD, GUMA QUOTA & INTERNATIONAL MASTERCLASSES */}
-      <section className="py-16 sm:py-24 bg-brand-midnight text-white cinema-grid-bg">
+      <motion.section
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.4, ease: 'easeOut' }}
+        className="py-16 sm:py-24 bg-brand-midnight text-white cinema-grid-bg"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             <div className="lg:col-span-6 space-y-6">
@@ -558,10 +584,15 @@ export const HomePage: React.FC = () => {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* SECTION 4: DAILY 4-SHIFT SCHEDULE & CTA BANNER */}
-      <section className="py-16 sm:py-20 bg-brand-ivory">
+      <motion.section
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.5, ease: 'easeOut' }}
+        className="py-16 sm:py-20 bg-brand-ivory"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           <div className="bg-white rounded-3xl border border-brand-navy/12 shadow-card p-6 sm:p-10">
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-8 border-b border-brand-navy/10">
@@ -657,7 +688,7 @@ export const HomePage: React.FC = () => {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
     </div>
   );
 };
