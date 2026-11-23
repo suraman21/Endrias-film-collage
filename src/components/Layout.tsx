@@ -216,6 +216,17 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
               </Link>
             </motion.div>
 
+            {/* SMS / Student Management Portal link */}
+            <a
+              href="https://sms.endriasfilmcollege.com"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="hidden sm:inline-flex items-center gap-1.5 px-4 py-2.5 rounded-lg border border-brand-orange bg-brand-orange/10 text-brand-orange hover:bg-brand-orange hover:text-brand-midnight font-bold text-sm transition-all whitespace-nowrap"
+            >
+              {t('Student Portal', 'የተማሪ ጎዳኝ')}
+              <ArrowUpRight className="w-4 h-4" />
+            </a>
+
             <button
               type="button"
               onClick={() => setMobileOpen(true)}
