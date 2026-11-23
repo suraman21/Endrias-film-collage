@@ -2,6 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
+  sectionFadeUp,
+  StaggerList,
+  ItemFadeUp,
+  LiftHover,
+  quick,
+} from '../animations';
+import {
   ArrowRight,
   Award,
   Building2,
@@ -238,7 +245,7 @@ export const AboutPage: React.FC = () => {
 
           <div className="space-y-6 relative before:hidden sm:before:block before:absolute before:top-4 before:bottom-4 before:left-6 before:w-0.5 before:bg-brand-navy/20">
             {TIMELINE_MILESTONES.map((m, idx) => (
-              <div key={idx} className="relative sm:pl-16">
+              <LiftHover key={idx} className="relative sm:pl-16">
                 <div className="hidden sm:flex absolute left-2.5 top-5 w-7 h-7 rounded-full bg-brand-navy border-4 border-brand-orange items-center justify-center" />
                 <div className="bg-white rounded-2xl p-6 border border-brand-navy/12 shadow-card space-y-2">
                   <span className="inline-block px-2.5 py-1 rounded-md bg-brand-navy/10 text-brand-navy font-mono text-xs font-bold">
@@ -251,7 +258,7 @@ export const AboutPage: React.FC = () => {
                     {t(m.descEn, m.descAm)}
                   </p>
                 </div>
-              </div>
+              </LiftHover>
             ))}
           </div>
         </div>
@@ -323,16 +330,13 @@ export const AboutPage: React.FC = () => {
                 descAm: 'ተመራቂ ተማሪዎች ከምርቃታቸው ጎን ለጎን የሚያከናውኑት የበጎ አድራጎት ተግባር።',
               },
             ].map((item, idx) => (
-              <div
-                key={idx}
-                className="p-6 rounded-2xl bg-white/5 border border-white/10 space-y-2.5"
-              >
+              <LiftHover key={idx} className="p-6 rounded-2xl bg-white/5 border border-white/10 space-y-2.5">
                 <item.icon className="w-6 h-6 text-brand-orange" />
                 <h3 className="font-bold text-base text-white">{t(item.titleEn, item.titleAm)}</h3>
                 <p className="text-xs sm:text-sm text-white/75 leading-relaxed">
                   {t(item.descEn, item.descAm)}
                 </p>
-              </div>
+              </LiftHover>
             ))}
           </div>
 

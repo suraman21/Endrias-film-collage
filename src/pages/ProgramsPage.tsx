@@ -2,6 +2,13 @@ import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
+  sectionFadeUp,
+  StaggerList,
+  ItemFadeUp,
+  LiftHover,
+  quick,
+} from '../animations';
+import {
   ArrowRight,
   BookOpen,
   CheckCircle2,
@@ -121,10 +128,13 @@ export const ProgramsPage: React.FC = () => {
                 { id: 'short', en: '2–3 Mo Short Tracks', am: 'የ2–3 ወር አጫጭር' },
                 { id: 'vip', en: '1-Mo VIP & VFX', am: 'የ1 ወር VIP / VFX' },
               ].map((tab) => (
-                <button
+                <motion.button
                   key={tab.id}
                   type="button"
                   onClick={() => setTierFilter(tab.id as TierCategory)}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  transition={quick}
                   className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-bold whitespace-nowrap transition-all ${
                     tierFilter === tab.id
                       ? 'bg-brand-navy text-white shadow-sm'
@@ -132,16 +142,14 @@ export const ProgramsPage: React.FC = () => {
                   }`}
                 >
                   {t(tab.en, tab.am)}
-                </button>
+                </motion.button>
               ))}
             </div>
           </div>
 
           <div className="space-y-6">
             {filteredTiers.map((prog) => (
-              <article
-                id={prog.id}
-                key={prog.id}
+              <LiftHover key={prog.id} id={prog.id}
                 className={`rounded-3xl p-6 sm:p-8 border transition-all ${
                   prog.featured
                     ? 'bg-brand-navy text-white border-brand-amber shadow-cinema'
@@ -260,7 +268,7 @@ export const ProgramsPage: React.FC = () => {
                     </div>
                   </div>
                 </div>
-              </article>
+              </LiftHover>
             ))}
           </div>
         </div>
@@ -462,10 +470,13 @@ export const ProgramsPage: React.FC = () => {
               { id: 'craft', en: 'Sound, Set Design & Makeup', am: 'ድምፅ፣ ሴት ዲዛይንና ሜካፕ' },
               { id: 'digital', en: 'AI, Graphics & Branding', am: 'AI፣ ግራፊክስና ብራንዲንግ' },
             ].map((d) => (
-              <button
+              <motion.button
                 key={d.id}
                 type="button"
                 onClick={() => setDiscipline(d.id as DisciplineFilter)}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                transition={quick}
                 className={`px-3.5 py-2 rounded-xl text-xs font-bold whitespace-nowrap transition-all ${
                   discipline === d.id
                     ? 'bg-brand-orange text-brand-midnight'
@@ -473,17 +484,14 @@ export const ProgramsPage: React.FC = () => {
                 }`}
               >
                 {t(d.en, d.am)}
-              </button>
+              </motion.button>
             ))}
           </div>
 
           {/* Course Cards Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {filteredModules.map((mod) => (
-              <div
-                key={mod.id}
-                className="p-6 rounded-2xl bg-white border border-brand-navy/12 shadow-card flex flex-col justify-between space-y-4 hover:border-brand-navy/35 transition-colors"
-              >
+              <LiftHover key={mod.id} className="p-6 rounded-2xl bg-white border border-brand-navy/12 shadow-card flex flex-col justify-between space-y-4">
                 <div className="space-y-2.5">
                   <div className="flex items-center justify-between gap-2">
                     <span
@@ -514,7 +522,7 @@ export const ProgramsPage: React.FC = () => {
                 <div className="pt-3 border-t border-brand-navy/10 text-[11px] font-mono text-brand-navy font-medium">
                   {mod.toolsOrFocus}
                 </div>
-              </div>
+              </LiftHover>
             ))}
           </div>
 

@@ -2,6 +2,11 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
+  sectionFadeUp,
+  LiftHover,
+  quick,
+} from '../animations';
+import {
   Award,
   CheckCircle2,
   Globe,
@@ -85,6 +90,7 @@ export const FacultyPage: React.FC = () => {
                 .map((n) => n[0])
                 .join('');
               return (
+                <LiftHover key={f.id} className="bg-white rounded-3xl p-6 sm:p-7 border border-brand-navy/12 shadow-card flex flex-col justify-between space-y-5">
                 <div
                   key={f.id}
                   className="bg-white rounded-3xl p-6 sm:p-7 border border-brand-navy/12 shadow-card flex flex-col justify-between space-y-5 hover:border-brand-navy/35 transition-all"
@@ -125,6 +131,7 @@ export const FacultyPage: React.FC = () => {
                     </ul>
                   </div>
                 </div>
+              </LiftHover>
               );
             })}
           </div>
@@ -184,10 +191,7 @@ export const FacultyPage: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {visibleWorkshops.map((w) => (
-              <div
-                key={w.id}
-                className="p-6 sm:p-7 rounded-3xl bg-brand-navyDark/90 border border-white/12 flex flex-col justify-between space-y-4"
-              >
+              <LiftHover key={w.id} className="p-6 sm:p-7 rounded-3xl bg-brand-navyDark/90 border border-white/12 flex flex-col justify-between space-y-4">
                 <div className="space-y-3">
                   <div className="flex flex-wrap items-center justify-between gap-2">
                     <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-orange/20 text-brand-orange text-xs font-mono font-bold">
@@ -220,7 +224,7 @@ export const FacultyPage: React.FC = () => {
                   <span>{t('Free Admission for Endrias Students & Alumni', 'ለኮሌጁ ተማሪዎች በነፃ የሚዘጋጅ')}</span>
                   <Award className="w-4 h-4 text-brand-orange" />
                 </div>
-              </div>
+              </LiftHover>
             ))}
           </div>
 

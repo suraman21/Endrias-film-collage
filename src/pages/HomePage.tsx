@@ -2,6 +2,15 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
+  StaggerList,
+  ItemFadeUp,
+  LiftHover,
+  scaleHover,
+  glowHover,
+  quick,
+  sectionFadeUp,
+} from '../animations';
+import {
   ArrowRight,
   Award,
   Camera,
@@ -31,10 +40,10 @@ export const HomePage: React.FC = () => {
   return (
     <div>
       {/* HERO SECTION: Full-Bleed Addis Ababa Cinema Studio */}
-      <motion.section
+      <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, ease: 'easeOut' }}
+        transition={{ duration: 0.6 }}
         className="relative bg-brand-midnight text-white overflow-hidden"
       >
         <div className="absolute inset-0">
@@ -71,65 +80,110 @@ export const HomePage: React.FC = () => {
 
               {/* Bilingual Headline */}
               <div className="space-y-3">
-                <p className="font-ethiopic text-brand-amber font-bold text-lg sm:text-2xl tracking-wide">
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                  className="font-ethiopic text-brand-amber font-bold text-lg sm:text-2xl tracking-wide"
+                >
                   «ከምናብ እስከ ገቢር — በፊልም ጥበብ ዓለምን እንስራ !»
-                </p>
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.08] text-white">
+                </motion.div>
+                <motion.h1
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.7, delay: 0.35 }}
+                  className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.08] text-white"
+                >
                   {t('From Imagination ', 'ከምናብ ወደ ')}
                   <span className="font-serif italic font-normal text-brand-orange">
                     {t('to the Cinema Screen.', 'ታላቁ የሲኒማ ስክሪን።')}
                   </span>
-                </h1>
+                </motion.h1>
               </div>
 
-              <p className="text-base sm:text-lg text-white/80 max-w-2xl leading-relaxed">
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.5 }}
+                className="text-base sm:text-lg text-white/80 max-w-2xl leading-relaxed"
+              >
                 {t(
                   'Located at 4 Kilo Roundabout in Addis Ababa, Endrias Film College PLC delivers government-accredited TVET Level I–IV Diplomas and 1-month to 1-year studio certificates—combining Blackmagic 6K Pro production sets, AAU/Gondar university-caliber faculty, and zero-commission career placement.',
                   'በአዲስ አበባ 4 ኪሎ አደባባይ የሚገኘው እንድርያስ የፊልም ኮሌጅ፤ ከ1 ወር እስከ 2 ዓመት ከሰርተፍኬት እስከ ደረጃ 4 (ዲፕሎማ) በዘመናዊ የሲኒማ ግብዓቶችና በከፍተኛ ዩኒቨርሲቲ መምህራን በተግባር ያሰለጥናል።'
                 )}
-              </p>
+              </motion.p>
 
               {/* Hero CTAs */}
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 pt-2">
-                <Link
-                  to="/programs"
-                  className="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-brand-orange hover:bg-brand-orangeHover text-brand-midnight font-extrabold text-base shadow-glow transition-all"
+                <motion.div
+                  whileHover={{ scale: 1.03 }}
+                  whileTap={{ scale: 0.97 }}
+                  transition={quick}
+                  className="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-brand-orange hover:bg-brand-orangeHover text-brand-midnight font-extrabold text-base shadow-glow"
                 >
-                  {t('Explore 6 Program Tiers', '6ቱን የትምህርት ፕሮግራሞች ይመልከቱ')}
-                  <ArrowRight className="w-5 h-5" />
-                </Link>
-                <Link
-                  to="/admissions"
-                  className="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-base border border-white/25 backdrop-blur-sm transition-all"
+                  <Link to="/programs">
+                    {t('Explore 6 Program Tiers', '6ቱን የትምህርት ፕሮግራሞች ይመልከቱ')}
+                    <motion.div
+                      whileHover={{ x: 4 }}
+                      transition={quick}
+                      className="w-5 h-5"
+                    >
+                      <ArrowRight className="w-5 h-5" />
+                    </motion.div>
+                  </Link>
+                </motion.div>
+                <motion.div
+                  whileHover={{ scale: 1.03 }}
+                  whileTap={{ scale: 0.97 }}
+                  transition={quick}
+                  className="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-base border border-white/25 backdrop-blur-sm"
                 >
-                  {t('Apply for 2019 E.C. Intake', 'ለ2019 ዓ.ም ምዝገባ ያመልክቱ')}
-                </Link>
+                  <Link to="/admissions">{t('Apply for 2019 E.C. Intake', 'ለ2019 ዓ.ም ምዝገባ ያመልክቱ')}</Link>
+                </motion.div>
               </div>
 
               {/* Camera Spec Strip */}
               <div className="pt-4 flex flex-wrap items-center gap-x-6 gap-y-2 text-xs font-mono text-white/65">
-                <span className="inline-flex items-center gap-1.5">
+                <motion.span
+                  whileHover={{ scale: 1.05 }}
+                  transition={quick}
+                  className="inline-flex items-center gap-1.5 text-white/85"
+                >
                   <Camera className="w-4 h-4 text-brand-orange" />
                   BLACKMAGIC 6K PRO &amp; 5D MK IV
-                </span>
-                <span className="inline-flex items-center gap-1.5">
+                </motion.span>
+                <motion.span
+                  whileHover={{ scale: 1.05 }}
+                  transition={quick}
+                  className="inline-flex items-center gap-1.5 text-white/85"
+                >
                   <Sparkles className="w-4 h-4 text-brand-orange" />
                   APUTURE / AMARAN LED STUDIO
-                </span>
-                <span className="inline-flex items-center gap-1.5">
+                </motion.span>
+                <motion.span
+                  whileHover={{ scale: 1.05 }}
+                  transition={quick}
+                  className="inline-flex items-center gap-1.5 text-white/85"
+                >
                   <ShieldCheck className="w-4 h-4 text-brand-orange" />
                   EDUCOC REGISTRY #68 / #32
-                </span>
+                </motion.span>
               </div>
             </div>
 
             {/* Right Crest Medallion Card */}
             <div className="lg:col-span-4 flex justify-center lg:justify-end">
-              <div className="w-full max-w-sm rounded-3xl bg-brand-navyDark/80 border border-brand-amber/35 backdrop-blur-md p-6 sm:p-7 shadow-cinema viewfinder-frame">
+              <LiftHover className="w-full max-w-sm rounded-3xl bg-brand-navyDark/80 border border-brand-amber/35 backdrop-blur-md p-6 sm:p-7 shadow-cinema viewfinder-frame">
                 <div className="flex flex-col items-center text-center space-y-4">
-                  <img
+                  <motion.img
                     src="/brand/logo-seal.png"
                     alt="Endrias Film College Crest"
+                    variants={{
+                      rest: { y: 0 },
+                      animate: { y: [0, -10, 0], transition: { duration: 4, repeat: Infinity, ease: 'easeInOut' } },
+                    }}
+                    initial="rest"
+                    animate="animate"
                     className="w-32 h-32 sm:w-36 sm:h-36 rounded-full drop-shadow-xl"
                   />
                   <div>
@@ -163,21 +217,21 @@ export const HomePage: React.FC = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </LiftHover>
             </div>
           </div>
         </div>
-      </motion.section>
+      </motion.div>
 
       {/* KEY INSTITUTIONAL METRICS STRIP */}
-      <motion.section
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.1, ease: 'easeOut' }}
+      <motion.div
+        variants={sectionFadeUp}
+        initial="hidden"
+        animate="visible"
         className="bg-brand-navy text-white border-y border-brand-amber/30"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+          <StaggerList className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {[
               {
                 stat: '8+ Yrs',
@@ -200,27 +254,24 @@ export const HomePage: React.FC = () => {
                 labelAm: 'ከኮሚሽን ነፃ የምሩቃን የስራ ትስስር አገልግሎት',
               },
             ].map((item, idx) => (
-              <div
-                key={idx}
-                className="border-l-2 border-brand-orange pl-4 space-y-1"
-              >
+              <ItemFadeUp key={idx} className="border-l-2 border-brand-orange pl-4 space-y-1">
                 <div className="text-2xl sm:text-3xl font-extrabold font-mono text-brand-orange">
                   {item.stat}
                 </div>
                 <div className="text-xs sm:text-sm text-white/85 leading-snug">
                   {t(item.labelEn, item.labelAm)}
                 </div>
-              </div>
+              </ItemFadeUp>
             ))}
-          </div>
+          </StaggerList>
         </div>
-      </motion.section>
+      </motion.div>
 
       {/* SECTION 1: THE 6 OFFICIAL ACADEMIC PROGRAM TIERS */}
-      <motion.section
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.2, ease: 'easeOut' }}
+      <motion.div
+        variants={sectionFadeUp}
+        initial="hidden"
+        animate="visible"
         className="py-16 sm:py-24 ivory-grid-bg"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -252,16 +303,13 @@ export const HomePage: React.FC = () => {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <StaggerList className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {PROGRAM_TIERS.map((prog) => (
-              <div
-                key={prog.id}
-                className={`rounded-2xl p-6 sm:p-7 flex flex-col justify-between transition-all border ${
-                  prog.featured
-                    ? 'bg-brand-navy text-white border-brand-amber shadow-cinema ring-2 ring-brand-orange/50'
-                    : 'bg-white text-brand-ink border-brand-navy/12 shadow-card hover:border-brand-navy/35'
-                }`}
-              >
+              <LiftHover key={prog.id} className={`rounded-2xl p-6 sm:p-7 flex flex-col justify-between border ${
+                prog.featured
+                  ? 'bg-brand-navy text-white border-brand-amber shadow-cinema ring-2 ring-brand-orange/50'
+                  : 'bg-white text-brand-ink border-brand-navy/12'
+              }`}>
                 <div className="space-y-4">
                   <div className="flex items-center justify-between gap-2">
                     <span
@@ -348,17 +396,17 @@ export const HomePage: React.FC = () => {
                     {t('Enroll', 'ይመዝገቡ')}
                   </Link>
                 </div>
-              </div>
+              </LiftHover>
             ))}
-          </div>
+          </StaggerList>
         </div>
-      </motion.section>
+      </motion.div>
 
       {/* SECTION 2: STUDIO INFRASTRUCTURE, POST-PRODUCTION & AI CURRICULUM */}
-      <motion.section
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.3, ease: 'easeOut' }}
+      <motion.div
+        variants={sectionFadeUp}
+        initial="hidden"
+        animate="visible"
         className="py-16 sm:py-24 bg-brand-sand/70 border-y border-brand-navy/10"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -431,7 +479,7 @@ export const HomePage: React.FC = () => {
                   {
                     icon: GraduationCap,
                     titleEn: 'AAU & Gondar MA/MFA Faculty',
-                    titleAm: 'የአዲስ አበባና ጎንደር ዩኒቨርሲቲ መምህራን',
+                    titleAm: 'የአዲስ አበባና ጎንደር ዩኒቨስቲ መምህራን',
                     descEn: 'Taught by Master’s-qualified scholars and award-winning directors.',
                     descAm: 'ሁለተኛ ዲግሪና ከዚያ በላይ ባላቸው ምሁራንና አንጋፋ ባለሙያዎች።',
                   },
@@ -443,10 +491,7 @@ export const HomePage: React.FC = () => {
                     descAm: 'ለሁሉም ምሩቃን ያለምንም ክፍያና ኮሚሽን ቀጥታ የስራ ዕድል ትስስር።',
                   },
                 ].map((card, i) => (
-                  <div
-                    key={i}
-                    className="p-4 rounded-2xl bg-white border border-brand-navy/10 shadow-sm space-y-1.5"
-                  >
+                  <LiftHover key={i} className="p-4 rounded-2xl bg-white border border-brand-navy/10 shadow-sm space-y-1.5">
                     <div className="w-9 h-9 rounded-lg bg-brand-navy text-brand-orange flex items-center justify-center">
                       <card.icon className="w-5 h-5" />
                     </div>
@@ -456,19 +501,19 @@ export const HomePage: React.FC = () => {
                     <p className="text-xs text-brand-muted leading-relaxed">
                       {t(card.descEn, card.descAm)}
                     </p>
-                  </div>
+                  </LiftHover>
                 ))}
               </div>
             </div>
           </div>
         </div>
-      </motion.section>
+      </motion.div>
 
       {/* SECTION 3: ENDI AWARD, GUMA QUOTA & INTERNATIONAL MASTERCLASSES */}
-      <motion.section
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.4, ease: 'easeOut' }}
+      <motion.div
+        variants={sectionFadeUp}
+        initial="hidden"
+        animate="visible"
         className="py-16 sm:py-24 bg-brand-midnight text-white cinema-grid-bg"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -510,7 +555,7 @@ export const HomePage: React.FC = () => {
                     textEn:
                       'Learn from Int’l Emmy winner Habtamu Sefiw, veteran director Henok Ayele, Munich’s Prof. Andreas Sippel (Otto Falckenberg School), and French visual artist Sébastien Cailleux.',
                     textAm:
-                      'ከዓለም አቀፍ ኤሚ አዋርድ አሸናፊው ሐብታሙ ሰፊው፣ ከሔኖክ አየለ፣ ከጀርመኑ አንድሬስ ሲፔል እና ከፈረንሳዊው ሴባስቲያን ካይሊውክስ ልምድ ይቅሰሙ።',
+                      'ከዓለም አቀፍ ኤሚ አዋርድ አሸናፊው ሐብታሙ ሰፊው፣ ከሔኖክ አየለ፣ ከጀርመኑ አንድሬስ ሲፔል እና ከፈረንሳዊው��ባስቲያ�ን ካይሊውክስ ልምድ ይቅሰሙ።',
                   },
                   {
                     icon: Tv,
@@ -522,10 +567,7 @@ export const HomePage: React.FC = () => {
                       'በ2018 ዓ.ም የ«ሀገሬ» ፊልም አሸናፊዋ ዮዲት ሰሎሞን እና የኢቢኤስ «በስንቱ» ድራማ ተዋናይ ህፃን ዳግም ተዘራ የኮሌጁ ፍሬዎች ናቸው።',
                   },
                 ].map((row, idx) => (
-                  <div
-                    key={idx}
-                    className="p-4 rounded-2xl bg-white/5 border border-white/10 flex items-start gap-3.5"
-                  >
+                  <LiftHover key={idx} className="p-4 rounded-2xl bg-white/5 border border-white/10 flex items-start gap-3.5">
                     <div className="w-10 h-10 rounded-xl bg-brand-orange/20 text-brand-orange flex items-center justify-center shrink-0">
                       <row.icon className="w-5 h-5" />
                     </div>
@@ -537,7 +579,7 @@ export const HomePage: React.FC = () => {
                         {t(row.textEn, row.textAm)}
                       </p>
                     </div>
-                  </div>
+                  </LiftHover>
                 ))}
               </div>
 
@@ -584,13 +626,13 @@ export const HomePage: React.FC = () => {
             </div>
           </div>
         </div>
-      </motion.section>
+      </motion.div>
 
       {/* SECTION 4: DAILY 4-SHIFT SCHEDULE & CTA BANNER */}
-      <motion.section
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.5, ease: 'easeOut' }}
+      <motion.div
+        variants={sectionFadeUp}
+        initial="hidden"
+        animate="visible"
         className="py-16 sm:py-20 bg-brand-ivory"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
@@ -619,10 +661,7 @@ export const HomePage: React.FC = () => {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 pt-8">
               {DAILY_SHIFTS.map((s) => (
-                <div
-                  key={s.id}
-                  className="p-4 rounded-2xl bg-brand-ivory border border-brand-navy/10 flex flex-col justify-between space-y-3"
-                >
+                <LiftHover key={s.id} className="p-4 rounded-2xl bg-brand-ivory border border-brand-navy/10 flex flex-col justify-between space-y-3">
                   <div>
                     <span className="inline-block px-2 py-0.5 rounded bg-brand-navy/10 text-brand-navy font-mono text-[11px] font-bold">
                       {t(s.daysEn, s.daysAm)}
@@ -637,7 +676,7 @@ export const HomePage: React.FC = () => {
                     </div>
                     <div className="font-mono text-xs text-brand-muted">{s.intlTime}</div>
                   </div>
-                </div>
+                </LiftHover>
               ))}
             </div>
           </div>
@@ -673,22 +712,26 @@ export const HomePage: React.FC = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-3 w-full lg:w-auto shrink-0">
-              <Link
-                to="/admissions"
-                className="px-6 py-4 rounded-xl bg-brand-orange hover:bg-brand-orangeHover text-brand-midnight font-extrabold text-sm sm:text-base text-center shadow-glow transition-all"
+              <motion.div
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}
+                transition={quick}
+                className="px-6 py-4 rounded-xl bg-brand-orange hover:bg-brand-orangeHover text-brand-midnight font-extrabold text-sm sm:text-base text-center shadow-glow"
               >
-                {t('Start Online Pre-Registration', 'የቅድመ-ምዝገባ ቅጽ ይሙሉ')}
-              </Link>
-              <a
-                href="tel:+251900003919"
-                className="px-6 py-4 rounded-xl bg-white/10 hover:bg-white/20 text-white font-mono font-bold text-sm sm:text-base text-center border border-white/20 transition-all"
+                <Link to="/admissions">{t('Start Online Pre-Registration', 'የቅድመ-ምዝገባ ቅጽ ይሙሉ')}</Link>
+              </motion.div>
+              <motion.div
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}
+                transition={quick}
+                className="px-6 py-4 rounded-xl bg-white/10 hover:bg-white/20 text-white font-mono font-bold text-sm sm:text-base text-center border border-white/20"
               >
-                0900 003 919
-              </a>
+                <a href="tel:+251900003919">0900 003 919</a>
+              </motion.div>
             </div>
           </div>
         </div>
-      </motion.section>
+      </motion.div>
     </div>
   );
 };

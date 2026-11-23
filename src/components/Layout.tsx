@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import {
   Menu,
   X,
@@ -15,6 +15,16 @@ import {
 } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { CONTACT_INFO } from '../data/collegeData';
+import {
+  pageVariants,
+  sectionFadeUp,
+  LiftHover,
+  pulseSlow,
+  floatY,
+  scaleHover,
+  glowHover,
+  quick,
+} from '../animations';
 
 export const GeezOrnament: React.FC<{ className?: string }> = ({ className = 'text-brand-orange' }) => (
   <span
@@ -72,8 +82,13 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex flex-wrap items-center justify-between gap-2">
           <div className="flex items-center gap-2 sm:gap-3 min-w-0">
             <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-brand-orange/20 text-brand-orange font-mono text-[11px] font-semibold shrink-0">
-              <span className="w-1.5 h-1.5 rounded-full bg-brand-orange animate-pulse" />
-              2019 E.C. INTAKE
+            <motion.span
+              variants={pulseSlow}
+              initial="rest"
+              animate="animate"
+              className="w-1.5 h-1.5 rounded-full bg-brand-orange"
+            />
+            2019 E.C. INTAKE
             </span>
             <span className="truncate text-white/80">
               {t(
@@ -125,9 +140,12 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-3">
           {/* Official Brand Crest Lockup */}
           <Link to="/" className="flex items-center gap-3 group min-w-0 shrink-0">
-            <img
+            <motion.img
               src="/brand/logo-seal.png"
               alt="Endrias Film College Official Seal"
+              variants={floatY}
+              initial="rest"
+              animate="animate"
               className="w-12 h-12 sm:w-14 sm:h-14 rounded-full object-contain drop-shadow-md group-hover:scale-105 transition-transform shrink-0"
             />
             <div className="leading-tight min-w-0">
@@ -143,42 +161,60 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
           {/* Desktop Navigation */}
           <nav className="hidden xl:flex items-center gap-1" aria-label="Primary">
             {NAV_ITEMS.map((item) => (
-              <NavLink
+              <motion.div
                 key={item.path}
-                to={item.path}
-                end={item.path === '/'}
-                className={({ isActive }) =>
-                  `px-3 py-2 rounded-lg text-sm font-semibold transition-all whitespace-nowrap ${
-                    isActive
-                      ? 'bg-brand-orange text-brand-midnight shadow-sm'
-                      : 'text-white/90 hover:text-white hover:bg-white/10'
-                  }`
-                }
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                transition={quick}
               >
-                {t(item.labelEn, item.labelAm)}
-              </NavLink>
+                <NavLink
+                  key={item.path}
+                  to={item.path}
+                  end={item.path === '/'}
+                  className={({ isActive }) =>
+                    `px-3 py-2 rounded-lg text-sm font-semibold transition-all whitespace-nowrap ${
+                      isActive
+                        ? 'bg-brand-orange text-brand-midnight shadow-sm'
+                        : 'text-white/90 hover:text-white hover:bg-white/10'
+                    }`
+                  }
+                >
+                  {t(item.labelEn, item.labelAm)}
+                </NavLink>
+              </motion.div>
             ))}
           </nav>
 
           {/* Right Actions: Bilingual Switcher + Apply CTA + Mobile Menu Trigger */}
           <div className="flex items-center gap-2 sm:gap-3 shrink-0">
-            <button
+            <motion.button
               type="button"
               onClick={toggleLang}
               aria-label="Switch language between English and Amharic"
-              className="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg border border-white/20 bg-white/5 hover:bg-white/15 text-white text-xs sm:text-sm font-semibold transition-colors min-h-[42px]"
+              whileHover={{ scale: 1.05, backgroundColor: 'rgba(255,255,255,0.2)' }}
+              whileTap={{ scale: 0.95 }}
+              transition={quick}
+              className="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg border border-white/20 bg-white/5 text-white text-xs sm:text-sm font-semibold min-h-[42px]"
             >
               <Globe className="w-4 h-4 text-brand-orange" />
               <span>{lang === 'en' ? 'አማርኛ' : 'EN'}</span>
-            </button>
+            </motion.button>
 
-            <Link
-              to="/admissions"
-              className="hidden sm:inline-flex items-center gap-1.5 px-4 py-2.5 rounded-lg bg-brand-orange hover:bg-brand-orangeHover text-brand-midnight font-bold text-sm shadow-glow transition-all whitespace-nowrap"
-            >
-              {t('Apply Now', 'አሁኑኑ ይመዝገቡ')}
-              <ArrowUpRight className="w-4 h-4" />
-            </Link>
+            <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.97 }} transition={quick}>
+              <Link
+                to="/admissions"
+                className="hidden sm:inline-flex items-center gap-1.5 px-4 py-2.5 rounded-lg bg-brand-orange hover:bg-brand-orangeHover text-brand-midnight font-bold text-sm shadow-glow transition-all whitespace-nowrap"
+              >
+                {t('Apply Now', 'አሁኑኑ ይመዝገቡ')}
+                <motion.div
+                  whileHover={{ x: 4 }}
+                  transition={quick}
+                  className="w-4 h-4"
+                >
+                  <ArrowUpRight className="w-4 h-4" />
+                </motion.div>
+              </Link>
+            </motion.div>
 
             <button
               type="button"
@@ -241,23 +277,30 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
 
             <div className="flex-1 overflow-y-auto p-4 space-y-1.5">
               {NAV_ITEMS.map((item) => (
-                <NavLink
+                <motion.div
                   key={item.path}
-                  to={item.path}
-                  end={item.path === '/'}
-                  className={({ isActive }) =>
-                    `flex items-center justify-between px-4 py-3.5 rounded-xl text-base font-semibold transition-colors ${
-                      isActive
-                        ? 'bg-brand-orange text-brand-midnight font-bold'
-                        : 'text-white/90 hover:bg-white/10'
-                    }`
-                  }
+                  whileHover={{ scaleX: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  transition={quick}
                 >
-                  <span>{t(item.labelEn, item.labelAm)}</span>
-                  <span className="text-xs font-ethiopic opacity-75">
-                    {lang === 'en' ? item.labelAm : item.labelEn}
-                  </span>
-                </NavLink>
+                  <NavLink
+                    key={item.path}
+                    to={item.path}
+                    end={item.path === '/'}
+                    className={({ isActive }) =>
+                      `flex items-center justify-between px-4 py-3.5 rounded-xl text-base font-semibold transition-colors ${
+                        isActive
+                          ? 'bg-brand-orange text-brand-midnight font-bold'
+                          : 'text-white/90 hover:bg-white/10'
+                      }`
+                    }
+                  >
+                    <span>{t(item.labelEn, item.labelAm)}</span>
+                    <span className="text-xs font-ethiopic opacity-75">
+                      {lang === 'en' ? item.labelAm : item.labelEn}
+                    </span>
+                  </NavLink>
+                </motion.div>
               ))}
 
               <div className="pt-4 mt-4 border-t border-white/10 space-y-3">
@@ -303,15 +346,18 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
         </motion.div>
       )}
 
-      {/* Main Route Content */}
-      <motion.main
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, ease: 'easeOut' }}
-        className="flex-1"
-      >
-        {children}
-      </motion.main>
+      {/* Main Route Content — Page Transition */}
+      <AnimatePresence mode="wait">
+        <motion.main
+          initial="initial"
+          animate="animate"
+          exit="exit"
+          variants={pageVariants}
+          className="flex-1 min-h-[calc(100vh-300px)]"
+        >
+          {children}
+        </motion.main>
+      </AnimatePresence>
 
       {/* Film Sprocket Accent Divider */}
       <motion.div
@@ -333,9 +379,12 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
             {/* Brand Identity Column */}
             <div className="lg:col-span-4 space-y-5">
               <div className="flex items-center gap-4">
-                <img
+                <motion.img
                   src="/brand/logo-seal.png"
                   alt="Endrias Film College Seal"
+                  variants={floatY}
+                  initial="rest"
+                  animate="animate"
                   className="w-16 h-16 rounded-full shrink-0"
                 />
                 <div>

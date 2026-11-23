@@ -2,6 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
+  LiftHover,
+  quick,
+} from '../animations';
+import {
   Award,
   CheckCircle2,
   Film,
@@ -82,10 +86,7 @@ export const ShowcasePage: React.FC = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {ENDI_AWARD_CATEGORIES.map((cat, idx) => (
-              <div
-                key={idx}
-                className="p-5 rounded-2xl bg-white border border-brand-navy/12 shadow-card flex items-start gap-3.5"
-              >
+              <LiftHover key={idx} className="p-5 rounded-2xl bg-white border border-brand-navy/12 shadow-card flex items-start gap-3.5">
                 <div className="w-9 h-9 rounded-xl bg-brand-orange/15 text-brand-orangeHover font-mono font-extrabold text-xs flex items-center justify-center shrink-0">
                   {String(idx + 1).padStart(2, '0')}
                 </div>
@@ -95,7 +96,7 @@ export const ShowcasePage: React.FC = () => {
                   </h3>
                   <p className="text-xs font-mono text-brand-muted">{cat.weight}</p>
                 </div>
-              </div>
+              </LiftHover>
             ))}
           </div>
 
@@ -154,10 +155,7 @@ export const ShowcasePage: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {GRADUATION_RECORDS.map((g, idx) => (
-              <div
-                key={idx}
-                className="bg-white rounded-3xl p-6 sm:p-8 border border-brand-navy/12 shadow-card space-y-4 flex flex-col justify-between"
-              >
+              <LiftHover key={idx} className="bg-white rounded-3xl p-6 sm:p-8 border border-brand-navy/12 shadow-card space-y-4 flex flex-col justify-between">
                 <div className="space-y-3">
                   <div className="flex flex-wrap items-center justify-between gap-2">
                     <span className="px-3 py-1 rounded-lg bg-brand-navy text-white font-mono text-xs font-bold">
@@ -191,7 +189,7 @@ export const ShowcasePage: React.FC = () => {
                     ))}
                   </ul>
                 </div>
-              </div>
+              </LiftHover>
             ))}
           </div>
         </div>
@@ -216,7 +214,7 @@ export const ShowcasePage: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="p-6 rounded-3xl bg-white border border-brand-navy/12 shadow-card space-y-3">
+            <LiftHover className="p-6 rounded-3xl bg-white border border-brand-navy/12 shadow-card space-y-3">
               <Film className="w-7 h-7 text-brand-orange" />
               <h3 className="font-extrabold text-lg text-brand-ink">
                 {t('Yodit Solomon — “Hagere” (ሀገሬ)', 'ዮዲት ሰሎሞን — «ሀገሬ» አጭር ፊልም')}
@@ -227,9 +225,9 @@ export const ShowcasePage: React.FC = () => {
                   'በ2018 ዓ.ም በአዲስ ሲኒማ ኮምፕሌክስ በተካሄደው ምርቃት በከፍተኛ አካዳሚክ ውጤት አንደኛ በመውጣትና በ«ሀገሬ» አጭር ፊልም የእንዲ አዋርድ ምርጥ ፊልም አሸናፊ በመሆን ድርብ ድል አስመዝግባለች።'
                 )}
               </p>
-            </div>
+            </LiftHover>
 
-            <div className="p-6 rounded-3xl bg-white border border-brand-navy/12 shadow-card space-y-3">
+            <LiftHover className="p-6 rounded-3xl bg-white border border-brand-navy/12 shadow-card space-y-3">
               <Tv className="w-7 h-7 text-brand-orange" />
               <h3 className="font-extrabold text-lg text-brand-ink">
                 {t('Dagim Tezera — EBS TV’s “Besintu”', 'ህፃን ዳግም ተዘራ — «በስንቱ» (EBS TV)')}
@@ -240,9 +238,9 @@ export const ShowcasePage: React.FC = () => {
                   'በኮሌጁ የክረምት የህፃናትና ታዳጊዎች የትወና ስልጠና ፕሮግራም ሰልጥኖ በኢቢኤስ ቴሌቪዥን ተወዳጅ በሆነው «በስንቱ» ድራማ ላይ «ናቲ» ሆኖ በመተወን ከፍተኛ አድናቆት አትርፏል።'
                 )}
               </p>
-            </div>
+            </LiftHover>
 
-            <div className="p-6 rounded-3xl bg-white border border-brand-navy/12 shadow-card space-y-3">
+            <LiftHover className="p-6 rounded-3xl bg-white border border-brand-navy/12 shadow-card space-y-3">
               <Sparkles className="w-7 h-7 text-brand-orange" />
               <h3 className="font-extrabold text-lg text-brand-ink">
                 {t('Alliance Éthio-Française Showcase', 'በአሊያንስ ኢትዮ-ፍራንሲስ የታዩ ፊልሞች')}
@@ -253,7 +251,7 @@ export const ShowcasePage: React.FC = () => {
                   'በኮሌጁ ተመራቂዎች የተሰሩት «ምክንያት»፣ «ደግ ለራሱ» እና «ነቁጥ» የተሰኙ አጫጭር ፊልሞች በፒያሳ አሊያንስ ኢትዮ-ፍራንሲስ ለዕይታና ለውይይት ቀርበዋል።'
                 )}
               </p>
-            </div>
+            </LiftHover>
           </div>
         </div>
       </motion.section>

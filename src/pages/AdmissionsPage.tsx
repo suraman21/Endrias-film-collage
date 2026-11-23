@@ -2,6 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
+  LiftHover,
+  quick,
+} from '../animations';
+import {
   CalendarCheck,
   Check,
   CheckCircle2,
@@ -134,12 +138,14 @@ Campus: 4 Kilo Roundabout, Next to Wekma (Main Campus), Addis Ababa`
                     <label className="block text-xs font-bold text-brand-ink mb-1.5">
                       {t('Applicant Full Name *', 'ሙሉ ስም *')}
                     </label>
-                    <input
+                    <motion.input
                       required
                       type="text"
                       value={fullName}
                       onChange={(e) => setFullName(e.target.value)}
                       placeholder={t('Enter your full name', 'ሙሉ ስምዎን ያስገቡ')}
+                      whileHover={{ borderColor: '#FF9000' }}
+                      whileFocus={{ borderColor: '#FF9000', boxShadow: '0 0 0 3px rgba(255,144,0,0.15)' }}
                       className="w-full px-3.5 py-2.5 rounded-xl border border-brand-navy/20 text-sm focus:outline-none focus:ring-2 focus:ring-brand-orange"
                     />
                   </div>
@@ -147,12 +153,14 @@ Campus: 4 Kilo Roundabout, Next to Wekma (Main Campus), Addis Ababa`
                     <label className="block text-xs font-bold text-brand-ink mb-1.5">
                       {t('Phone Number *', 'ስልክ ቁጥር *')}
                     </label>
-                    <input
+                    <motion.input
                       required
                       type="tel"
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
                       placeholder="09... / +251..."
+                      whileHover={{ borderColor: '#FF9000' }}
+                      whileFocus={{ borderColor: '#FF9000', boxShadow: '0 0 0 3px rgba(255,144,0,0.15)' }}
                       className="w-full px-3.5 py-2.5 rounded-xl border border-brand-navy/20 text-sm focus:outline-none focus:ring-2 focus:ring-brand-orange"
                     />
                   </div>
@@ -163,11 +171,13 @@ Campus: 4 Kilo Roundabout, Next to Wekma (Main Campus), Addis Ababa`
                     <label className="block text-xs font-bold text-brand-ink mb-1.5">
                       {t('Email Address (Optional)', 'ኢሜይል (ካለዎት)')}
                     </label>
-                    <input
+                    <motion.input
                       type="email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder="you@example.com"
+                      whileHover={{ borderColor: '#FF9000' }}
+                      whileFocus={{ borderColor: '#FF9000', boxShadow: '0 0 0 3px rgba(255,144,0,0.15)' }}
                       className="w-full px-3.5 py-2.5 rounded-xl border border-brand-navy/20 text-sm focus:outline-none focus:ring-2 focus:ring-brand-orange"
                     />
                   </div>
@@ -175,9 +185,11 @@ Campus: 4 Kilo Roundabout, Next to Wekma (Main Campus), Addis Ababa`
                     <label className="block text-xs font-bold text-brand-ink mb-1.5">
                       {t('Prior Education / Certificate', 'የትምህርት ዝግጅት')}
                     </label>
-                    <select
+                    <motion.select
                       value={educationBg}
                       onChange={(e) => setEducationBg(e.target.value)}
+                      whileHover={{ borderColor: '#FF9000' }}
+                      whileFocus={{ borderColor: '#FF9000', boxShadow: '0 0 0 3px rgba(255,144,0,0.15)' }}
                       className="w-full px-3.5 py-2.5 rounded-xl border border-brand-navy/20 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-brand-orange"
                     >
                       <option>Grade 10 / 12 Complete</option>
@@ -185,7 +197,7 @@ Campus: 4 Kilo Roundabout, Next to Wekma (Main Campus), Addis Ababa`
                       <option>University / College Student or Graduate</option>
                       <option>Working Media Professional / Content Creator</option>
                       <option>Youth / Kiremt Talent Trainee</option>
-                    </select>
+                    </motion.select>
                   </div>
                 </div>
 
@@ -193,9 +205,11 @@ Campus: 4 Kilo Roundabout, Next to Wekma (Main Campus), Addis Ababa`
                   <label className="block text-xs font-bold text-brand-ink mb-1.5">
                     {t('Select Academic Program Tier *', 'የትምህርት ፕሮግራም ይምረጡ *')}
                   </label>
-                  <select
+                  <motion.select
                     value={programId}
                     onChange={(e) => setProgramId(e.target.value)}
+                    whileHover={{ borderColor: '#FF9000' }}
+                    whileFocus={{ borderColor: '#FF9000', boxShadow: '0 0 0 3px rgba(255,144,0,0.15)' }}
                     className="w-full px-3.5 py-2.5 rounded-xl border border-brand-navy/20 text-sm bg-white font-semibold focus:outline-none focus:ring-2 focus:ring-brand-orange"
                   >
                     {PROGRAM_TIERS.map((p) => (
@@ -203,16 +217,18 @@ Campus: 4 Kilo Roundabout, Next to Wekma (Main Campus), Addis Ababa`
                         [{p.code}] {t(p.titleEn, p.titleAm)} — {t(p.durationEn, p.durationAm)}
                       </option>
                     ))}
-                  </select>
+                  </motion.select>
                 </div>
 
                 <div>
                   <label className="block text-xs font-bold text-brand-ink mb-1.5">
                     {t('Preferred 2-Hour Daily Shift *', 'የሚመርጡት የመማሪያ ፈረቃ *')}
                   </label>
-                  <select
+                  <motion.select
                     value={shiftId}
                     onChange={(e) => setShiftId(e.target.value)}
+                    whileHover={{ borderColor: '#FF9000' }}
+                    whileFocus={{ borderColor: '#FF9000', boxShadow: '0 0 0 3px rgba(255,144,0,0.15)' }}
                     className="w-full px-3.5 py-2.5 rounded-xl border border-brand-navy/20 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-brand-orange"
                   >
                     {DAILY_SHIFTS.map((s) => (
@@ -220,7 +236,7 @@ Campus: 4 Kilo Roundabout, Next to Wekma (Main Campus), Addis Ababa`
                         {t(s.labelEn, s.labelAm)} · {s.ethiopianTime} ({s.intlTime})
                       </option>
                     ))}
-                  </select>
+                  </motion.select>
                 </div>
 
                 <div>
@@ -242,12 +258,15 @@ Campus: 4 Kilo Roundabout, Next to Wekma (Main Campus), Addis Ababa`
                   />
                 </div>
 
-                <button
+                <motion.button
                   type="submit"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  transition={quick}
                   className="w-full py-4 px-6 rounded-xl bg-brand-orange hover:bg-brand-orangeHover text-brand-midnight font-extrabold text-base shadow-glow transition-all"
                 >
                   {t('Generate Official Pre-Registration Slip', 'የቅድመ-ምዝገባ ካርድ አዘጋጅ')}
-                </button>
+                </motion.button>
               </form>
 
               {/* Generated Pre-Registration Card */}
@@ -261,22 +280,28 @@ Campus: 4 Kilo Roundabout, Next to Wekma (Main Campus), Addis Ababa`
                       <div className="text-lg font-mono font-extrabold text-white">{slipCode}</div>
                     </div>
                     <div className="flex items-center gap-2">
-                      <button
+                      <motion.button
                         type="button"
                         onClick={copySlip}
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        transition={quick}
                         className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-xs font-bold"
                       >
                         {copied ? <Check className="w-3.5 h-3.5 text-brand-orange" /> : <Copy className="w-3.5 h-3.5" />}
                         {copied ? t('Copied', 'ተቀድቷል') : t('Copy', 'ቅዳ')}
-                      </button>
-                      <button
+                      </motion.button>
+                      <motion.button
                         type="button"
                         onClick={() => window.print()}
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        transition={quick}
                         className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-xs font-bold"
                       >
                         <Printer className="w-3.5 h-3.5" />
                         {t('Print', 'ፕሪንት')}
-                      </button>
+                      </motion.button>
                     </div>
                   </div>
 
@@ -312,7 +337,7 @@ Campus: 4 Kilo Roundabout, Next to Wekma (Main Campus), Addis Ababa`
           {/* Right: 4 Kilo Campus Locations, Direct Lines & Academic Policies */}
           <div className="lg:col-span-5 space-y-6">
             {/* Campus Directory Card */}
-            <div className="bg-brand-navy text-white rounded-3xl p-6 sm:p-8 shadow-cinema space-y-5">
+            <LiftHover className="bg-brand-navy text-white rounded-3xl p-6 sm:p-8 shadow-cinema space-y-5">
               <div className="space-y-1">
                 <div className="text-xs font-mono uppercase text-brand-amber font-bold">
                   {t('Campus & Registrar Directory', 'የካምፓስ አድራሻ እና ስልኮች')}
@@ -390,10 +415,10 @@ Campus: 4 Kilo Roundabout, Next to Wekma (Main Campus), Addis Ababa`
                   </div>
                 </div>
               </div>
-            </div>
+            </LiftHover>
 
             {/* Registrar Academic Guidelines Card */}
-            <div className="bg-white rounded-3xl p-6 sm:p-7 border border-brand-navy/12 shadow-card space-y-4">
+            <LiftHover className="bg-white rounded-3xl p-6 sm:p-7 border border-brand-navy/12 shadow-card space-y-4">
               <div className="flex items-center gap-2 text-brand-navy font-extrabold text-base">
                 <CalendarCheck className="w-5 h-5 text-brand-orange" />
                 {t('Registrar & Graduation Guidelines', 'የምዝገባ፣ ክፍያ እና ምርቃት ደንቦች')}
@@ -437,7 +462,7 @@ Campus: 4 Kilo Roundabout, Next to Wekma (Main Campus), Addis Ababa`
                   </span>
                 </li>
               </ul>
-            </div>
+            </LiftHover>
           </div>
         </div>
       </motion.section>

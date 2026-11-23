@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
+  LiftHover,
+  quick,
+} from '../animations';
+import {
   Briefcase,
   Building2,
   CheckCircle2,
@@ -125,10 +129,13 @@ export const CareersPage: React.FC = () => {
                 { id: 'camera', en: 'Cinematography', am: 'ሲኒማቶግራፊ' },
                 { id: 'editing', en: 'Editing & Digital', am: 'ኤዲቲንግና ዲጂታል' },
               ].map((tab) => (
-                <button
+                <motion.button
                   key={tab.id}
                   type="button"
                   onClick={() => setCatFilter(tab.id as typeof catFilter)}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  transition={quick}
                   className={`px-3.5 py-2 rounded-xl text-xs font-bold whitespace-nowrap transition-all ${
                     catFilter === tab.id
                       ? 'bg-brand-navy text-white'
@@ -136,17 +143,14 @@ export const CareersPage: React.FC = () => {
                   }`}
                 >
                   {t(tab.en, tab.am)}
-                </button>
+                </motion.button>
               ))}
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {filteredJobs.map((job) => (
-              <div
-                key={job.id}
-                className="bg-white rounded-3xl p-6 sm:p-7 border border-brand-navy/12 shadow-card flex flex-col justify-between space-y-4"
-              >
+              <LiftHover key={job.id} className="bg-white rounded-3xl p-6 sm:p-7 border border-brand-navy/12 shadow-card flex flex-col justify-between space-y-4">
                 <div className="space-y-3">
                   <div className="flex flex-wrap items-center justify-between gap-2">
                     <span className="px-2.5 py-1 rounded-lg bg-brand-orange/15 text-brand-orangeHover font-mono text-xs font-bold">
@@ -196,7 +200,7 @@ export const CareersPage: React.FC = () => {
                     {t('Apply via @efcfilm', 'በ @efcfilm ያመልክቱ')}
                   </a>
                 </div>
-              </div>
+              </LiftHover>
             ))}
           </div>
         </div>
