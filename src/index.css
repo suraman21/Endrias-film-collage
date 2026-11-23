@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', 'Noto Sans Ethiopic', system-ui, sans-serif;
+    background-color: #FAF7F2;
+    color: #0B1928;
+    overflow-x: hidden;
+  }
+}
+
+/* Subtle film grain & cinema perforation accents */
+.cinema-grid-bg {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.ivory-grid-bg {
+  background-image:
+    linear-gradient(to right, rgba(5, 70, 119, 0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(5, 70, 119, 0.045) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
+/* Film sprocket border strip */
+.sprocket-strip {
+  background-image: repeating-linear-gradient(
+    to right,
+    rgba(230, 154, 53, 0.32) 0px,
+    rgba(230, 154, 53, 0.32) 10px,
+    transparent 10px,
+    transparent 22px
+  );
+}
+
+/* Viewfinder corner brackets */
+.viewfinder-frame {
+  position: relative;
+}
+.viewfinder-frame::before,
+.viewfinder-frame::after {
+  content: '';
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  pointer-events: none;
+}
+.viewfinder-frame::before {
+  top: 14px;
+  left: 14px;
+  border-top: 2px solid rgba(255, 144, 0, 0.75);
+  border-left: 2px solid rgba(255, 144, 0, 0.75);
+}
+.viewfinder-frame::after {
+  bottom: 14px;
+  right: 14px;
+  border-bottom: 2px solid rgba(255, 144, 0, 0.75);
+  border-right: 2px solid rgba(255, 144, 0, 0.75);
+}
+
+/* Hide scrollbar for horizontal filter pills on mobile */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
