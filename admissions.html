@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Admissions & 2019 E.C. Registration — Endrias Film College</title>
+<meta name="description" content="Pre-register online, pick your shift, and receive your application slip code." />
+<meta property="og:title" content="Admissions & 2019 E.C. Registration — Endrias Film College" />
+<meta property="og:description" content="Pre-register online, pick your shift, and receive your application slip code." />
+<meta property="og:type" content="website" />
+<link rel="icon" type="image/png" href="brand/logo-mark.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=Noto+Sans+Ethiopic:wght@400;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+<div class="shell">
+  <!-- ===== Top utility strip ===== -->
+  <div class="top-strip">
+    <div class="container">
+      <div class="top-strip-left">
+        <span class="intake-pill"><span class="pulse-dot"></span>2019 E.C. INTAKE</span>
+        <span class="top-strip-text" data-en="AAETQAA Accredited TVET Film Conservatory · 4 Kilo, Addis Ababa" data-am="በአዲስ አበባ ብቸኛው በፊልም ጥበብ ሙሉ ዕውቅና ያለው ኮሌጅ · 4 ኪሎ">AAETQAA Accredited TVET Film Conservatory · 4 Kilo, Addis Ababa</span>
+      </div>
+      <div class="top-strip-links">
+        <a href="tel:+251900003919"><i data-icon="phone"></i>0900 003 919</a>
+        <a href="tel:+251942563535"><i data-icon="phone"></i>0942 563 535</a>
+        <a href="https://t.me/endifilm" target="_blank" rel="noreferrer"><i data-icon="send"></i>@endifilm</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Sticky header ===== -->
+  <header class="site-header">
+    <div class="container">
+      <a class="brand-lockup" href="index.html" aria-label="Endrias Film College — home">
+        <img src="brand/logo-seal.png" alt="Endrias Film College Official Seal" />
+        <div>
+          <div class="brand-am">እንድርያስ የፊልም ኮሌጅ</div>
+          <div class="brand-en">Endrias Film College</div>
+        </div>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary">
+        <a href="index.html" data-nav data-en="Home" data-am="መነሻ">Home</a>
+        <a href="programs.html" data-nav data-en="Programs" data-am="ፕሮግራሞች">Programs</a>
+        <a href="about.html" data-nav data-en="About &amp; Accreditation" data-am="ስለ ኮሌጁ">About &amp; Accreditation</a>
+        <a href="faculty.html" data-nav data-en="Faculty" data-am="መምህራን">Faculty</a>
+        <a href="showcase.html" data-nav data-en="Endi Award" data-am="እንዲ አዋርድ">Endi Award</a>
+        <a href="careers.html" data-nav data-en="Careers" data-am="የስራ ትስስር">Careers</a>
+        <a href="admissions.html" data-nav data-en="Admissions" data-am="ምዝገባ">Admissions</a>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="lang-btn" aria-label="Switch language between English and Amharic">
+          <i data-icon="globe"></i><span class="lang-label">አማርኛ</span>
+        </button>
+
+        <a class="btn-apply" href="admissions.html">
+          <span data-en="Apply Now" data-am="አሁኑኑ ይመዝገቡ">Apply Now</span>
+          <i data-icon="arrow-up-right"></i>
+        </a>
+
+        <a class="btn-portal" href="https://sms.endriasfilmcollege.com" target="_blank" rel="noreferrer noopener">
+          <span data-en="Student Portal" data-am="የተማሪ ጎዳኝ">Student Portal</span>
+          <i data-icon="arrow-up-right"></i>
+        </a>
+
+        <button type="button" class="menu-btn" id="menu-open" aria-label="Open navigation menu">
+          <i data-icon="menu"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== Mobile / tablet slide-over drawer ===== -->
+  <div class="drawer-overlay" id="drawer-overlay"></div>
+  <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Navigation">
+    <div class="drawer-head">
+      <div class="brand-lockup">
+        <img src="brand/logo-seal.png" alt="Endrias Film College" />
+        <div>
+          <div class="brand-am" style="font-size:12px">እንድርያስ የፊልም ኮሌጅ</div>
+          <div class="brand-en" style="font-size:14px">Endrias Film College</div>
+        </div>
+      </div>
+      <button type="button" id="menu-close" aria-label="Close navigation menu" style="width:44px;height:44px;border-radius:8px;background:rgba(255,255,255,.1);color:#fff;display:flex;align-items:center;justify-content:center">
+        <i data-icon="x"></i>
+      </button>
+    </div>
+
+    <div class="drawer-body">
+      <a class="nav-link" href="index.html" data-nav data-en="Home" data-am="መነሻ">Home</a>
+      <a class="nav-link" href="programs.html" data-nav data-en="Programs" data-am="ፕሮግራሞች">Programs</a>
+      <a class="nav-link" href="about.html" data-nav data-en="About &amp; Accreditation" data-am="ስለ ኮሌጁ">About &amp; Accreditation</a>
+      <a class="nav-link" href="faculty.html" data-nav data-en="Faculty" data-am="መምህራን">Faculty</a>
+      <a class="nav-link" href="showcase.html" data-nav data-en="Endi Award" data-am="እንዲ አዋርድ">Endi Award</a>
+      <a class="nav-link" href="careers.html" data-nav data-en="Careers" data-am="የስራ ትስስር">Careers</a>
+      <a class="nav-link" href="admissions.html" data-nav data-en="Admissions" data-am="ምዝገባ">Admissions</a>
+
+      <div class="drawer-cta">
+        <a class="btn-apply" href="admissions.html">
+          <span data-en="Start 2019 E.C. Registration" data-am="የ2019 ዓ.ም ምዝገባ ይጀምሩ">Start 2019 E.C. Registration</span>
+          <i data-icon="arrow-up-right"></i>
+        </a>
+        <div class="drawer-phones">
+          <a href="tel:+251900003919"><i data-icon="phone"></i>0900 003 919</a>
+          <a href="tel:+251942563535"><i data-icon="phone"></i>0942 563 535</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="drawer-foot">
+      <span>4 Kilo Roundabout, Addis Ababa</span>
+      <a href="https://t.me/endifilm" target="_blank" rel="noreferrer">@endifilm <i data-icon="arrow-up-right"></i></a>
+    </div>
+  </aside>
+
+  <main>
+    <!-- ===== Page hero ===== -->
+    <section class="page-hero cinema-grid-bg">
+      <div class="container">
+        <div style="max-width:48rem">
+          <div class="pill"><span class="geez">፠</span> <span data-en="2019 E.C. ADMISSIONS &amp; 4 KILO CAMPUS" data-am="የ2019 ዓ.ም ምዝገባ እና አድራሻ">2019 E.C. ADMISSIONS &amp; 4 KILO CAMPUS</span></div>
+          <h1 class="h1" style="margin-top:1rem" data-en="Begin Your Cinema Journey at 4 Kilo Roundabout" data-am="የ2019 ዓ.ም የፊልም ጥበብ ምዝገባዎን ዛሬውኑ ይጀምሩ">Begin Your Cinema Journey at 4 Kilo Roundabout</h1>
+          <p class="lead" style="margin-top:1rem" data-en="Complete your online pre-registration slip below or visit our 4 Kilo Main Campus (next to Wekma &amp; Holy Trinity University 4th Floor) to tour our studios and finalize your shift." data-am="የቅድመ-ምዝገባ ቅጹን ከታች ይሙሉ ወይም 4 ኪሎ አደባባይ ከወክማ ጎን (እና ቅድስት ሥላሴ ዩኒቨርሲቲ 4ኛ ፎቅ) በሚገኘው ካምፓሳችን በአካል በመገኘት ይመዝገቡ።">Complete your online pre-registration slip below or visit our 4 Kilo Main Campus (next to Wekma &amp; Holy Trinity University 4th Floor) to tour our studios and finalize your shift.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 1: Pre-registration form + campus directory ===== -->
+    <section class="section ivory-grid-bg">
+      <div class="container">
+        <div class="split" style="align-items:start">
+          <!-- Left: pre-registration builder -->
+          <div class="split-7">
+            <div style="background:#fff;border-radius:24px;border:1px solid rgba(5,70,119,.15);box-shadow:var(--shadow-card);padding:2rem">
+              <div style="display:flex;align-items:center;justify-content:space-between;gap:.75rem;padding-bottom:1rem;border-bottom:1px solid rgba(5,70,119,.1)">
+                <div>
+                  <div style="font-family:var(--font-mono);font-size:11px;text-transform:uppercase;color:var(--orange-hover);font-weight:700" data-en="Step 1 · Student Pre-Registration" data-am="ደረጃ 1 · የቅድመ-ምዝገባ ቅጽ">Step 1 · Student Pre-Registration</div>
+                  <h2 style="font-size:22px;font-weight:800;color:var(--ink);margin-top:2px" data-en="Generate Your Admission &amp; Shift Slip" data-am="የመመዝገቢያና የፈረቃ ምርጫ ቅጽ">Generate Your Admission &amp; Shift Slip</h2>
+                </div>
+                <img src="brand/logo-seal.png" alt="Endrias Seal" style="width:48px;height:48px;border-radius:50%;flex-shrink:0" />
+              </div>
+
+              <form id="admission-form" class="form-stack" style="margin-top:1.5rem">
+                <div class="form-grid">
+                  <div class="field">
+                    <label data-en="Applicant Full Name *" data-am="ሙሉ ስም *">Applicant Full Name *</label>
+                    <input required type="text" id="f-name" data-en-ph="Enter your full name" data-am-ph="ሙሉ ስምዎን ያስገቡ" placeholder="Enter your full name" />
+                  </div>
+                  <div class="field">
+                    <label data-en="Phone Number *" data-am="ስልክ ቁጥር *">Phone Number *</label>
+                    <input required type="tel" id="f-phone" placeholder="09... / +251..." />
+                  </div>
+                </div>
+                <div class="form-grid">
+                  <div class="field">
+                    <label data-en="Email Address (Optional)" data-am="ኢሜይል (ካለዎት)">Email Address (Optional)</label>
+                    <input type="email" id="f-email" placeholder="you@example.com" />
+                  </div>
+                  <div class="field">
+                    <label data-en="Prior Education / Certificate" data-am="የትምህርት ዝግጅት">Prior Education / Certificate</label>
+                    <select id="f-education">
+                      <option>Grade 10 / 12 Complete</option>
+                      <option>1-Year Filmmaking Certificate (+10-Mo Diploma Bridge)</option>
+                      <option>University / College Student or Graduate</option>
+                      <option>Working Media Professional / Content Creator</option>
+                      <option>Youth / Kiremt Talent Trainee</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="field">
+                  <label data-en="Select Academic Program Tier *" data-am="የትምህርት ፕሮግራም ይምረጡ *">Select Academic Program Tier *</label>
+                  <select id="f-program" style="font-weight:600"></select>
+                </div>
+                <div class="field">
+                  <label data-en="Preferred 2-Hour Daily Shift *" data-am="የሚመርጡት የመማሪያ ፈረቃ *">Preferred 2-Hour Daily Shift *</label>
+                  <select id="f-shift"></select>
+                </div>
+                <div class="field">
+                  <label data-en="Chosen Courses (for 3-Month / 1-Month VIP) or Questions" data-am="የመረጧቸው ኮርሶች (ለ3 ወር / ለ1 ወር VIP) ወይም ተጨማሪ ጥያቄ">Chosen Courses (for 3-Month / 1-Month VIP) or Questions</label>
+                  <textarea rows="3" id="f-notes" data-en-ph="e.g. Interested in Cinematography + Video Editing, or VFX 1-on-1 VIP class..." data-am-ph="ለምሳሌ፦ ሲኒማቶግራፊ እና ኤዲቲንግ፣ ወይም የግል VFX ስልጠና..." placeholder="e.g. Interested in Cinematography + Video Editing, or VFX 1-on-1 VIP class..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-orange btn-block" style="padding:1rem" data-en="Generate Official Pre-Registration Slip" data-am="የቅድመ-ምዝገባ ካርድ አዘጋጅ">Generate Official Pre-Registration Slip</button>
+              </form>
+
+              <!-- Generated slip -->
+              <div id="slip" class="slip" hidden style="margin-top:1.5rem">
+                <div class="slip-head">
+                  <div>
+                    <div class="lbl" data-en="PRE-REGISTRATION REFERENCE" data-am="የቅድመ-ምዝገባ ማጣቀሻ">PRE-REGISTRATION REFERENCE</div>
+                    <div class="code" id="slip-code">EFC-2019-0000</div>
+                  </div>
+                  <div class="slip-actions">
+                    <button type="button" id="slip-copy"><i data-icon="copy"></i><span data-en="Copy" data-am="ቅዳ">Copy</span></button>
+                    <button type="button" id="slip-print"><i data-icon="printer"></i><span data-en="Print" data-am="ፕሪንት">Print</span></button>
+                  </div>
+                </div>
+                <pre id="slip-text"></pre>
+                <div style="display:flex;flex-wrap:wrap;gap:.75rem;padding-top:.75rem">
+                  <a class="btn btn-orange btn-sm" href="https://t.me/al0254" target="_blank" rel="noreferrer">
+                    <i data-icon="send"></i>
+                    <span data-en="Send Slip to Registrar (@al0254)" data-am="ለሬጅስትራር (@al0254) በቴሌግራም ላክ">Send Slip to Registrar (@al0254)</span>
+                  </a>
+                  <a class="btn btn-white-ghost btn-sm" id="slip-mail" href="#">
+                    <i data-icon="mail" style="color:var(--orange)"></i>
+                    <span data-en="Submit via Email" data-am="በኢሜይል ላክ">Submit via Email</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: campus directory + guidelines -->
+          <div class="split-5">
+            <div style="background:var(--navy);color:#fff;border-radius:24px;padding:2rem;box-shadow:var(--shadow-cinema)">
+              <div style="font-family:var(--font-mono);font-size:11px;text-transform:uppercase;color:var(--amber);font-weight:700" data-en="Campus &amp; Registrar Directory" data-am="የካምፓስ አድራሻ እና ስልኮች">Campus &amp; Registrar Directory</div>
+              <h3 class="h3" style="margin-top:.25rem" data-en="Visit Us at 4 Kilo Roundabout" data-am="4 ኪሎ አደባባይ በአካል ያግኙን">Visit Us at 4 Kilo Roundabout</h3>
+
+              <div style="margin-top:1.25rem;display:flex;flex-direction:column;gap:1rem;font-size:14px">
+                <div style="padding:1rem;border-radius:16px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.1)">
+                  <div style="display:flex;align-items:center;gap:.5rem;font-weight:700;color:var(--amber)">
+                    <i data-icon="map-pin" style="width:16px;height:16px;color:var(--orange);flex-shrink:0"></i>
+                    <span data-en="Main Campus (ዋናው ካምፓስ)" data-am="ዋናው ካምፓስ">Main Campus (ዋናው ካምፓስ)</span>
+                  </div>
+                  <p style="color:rgba(255,255,255,.9);font-size:13px;line-height:1.7;margin-top:.25rem" data-en="4 Kilo Roundabout, Next to Wekma (Main Campus), Arada Sub-City, Woreda 9, Addis Ababa" data-am="4 ኪሎ አደባባይ ከወክማ ጎን (ዋናው ካምፓስ)፣ አራዳ ክፍለ ከተማ ወረዳ 9፣ አዲስ አበባ">4 Kilo Roundabout, Next to Wekma (Main Campus), Arada Sub-City, Woreda 9, Addis Ababa</p>
+                </div>
+                <div style="padding:1rem;border-radius:16px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.1)">
+                  <div style="display:flex;align-items:center;gap:.5rem;font-weight:700;color:var(--amber)">
+                    <i data-icon="map-pin" style="width:16px;height:16px;color:var(--orange);flex-shrink:0"></i>
+                    <span data-en="Holy Trinity Building Studio Hall" data-am="ቅድስት ሥላሴ ዩኒቨርሲቲ ህንፃ">Holy Trinity Building Studio Hall</span>
+                  </div>
+                  <p style="color:rgba(255,255,255,.9);font-size:13px;line-height:1.7;margin-top:.25rem" data-en="4 Kilo Roundabout, Holy Trinity University Building, 4th Floor Terrace, Addis Ababa" data-am="4 ኪሎ አደባባይ ቅድስት ሥላሴ ዩኒቨርሲቲ ህንፃ 4ኛ ፎቅ (ቴራስ ላይ)፣ አዲስ አበባ">4 Kilo Roundabout, Holy Trinity University Building, 4th Floor Terrace, Addis Ababa</p>
+                </div>
+
+                <div>
+                  <div style="font-family:var(--font-mono);font-size:11px;text-transform:uppercase;color:var(--amber)" data-en="Direct Admissions Hotlines" data-am="ቀጥታ የምዝገባ ስልክ መስመሮች">Direct Admissions Hotlines</div>
+                  <div style="display:grid;grid-template-columns:1fr 1fr;gap:.625rem;margin-top:.5rem">
+                    <a href="tel:+251900003919" style="padding:.75rem;border-radius:12px;background:rgba(3,21,37,.7);border:1px solid rgba(255,255,255,.15);font-family:var(--font-mono);font-size:13px;font-weight:700;display:flex;align-items:center;gap:.5rem">
+                      <i data-icon="phone" style="width:16px;height:16px;color:var(--orange);flex-shrink:0"></i>+251 900 003 919</a>
+                    <a href="tel:+251942563535" style="padding:.75rem;border-radius:12px;background:rgba(3,21,37,.7);border:1px solid rgba(255,255,255,.15);font-family:var(--font-mono);font-size:13px;font-weight:700;display:flex;align-items:center;gap:.5rem">
+                      <i data-icon="phone" style="width:16px;height:16px;color:var(--orange);flex-shrink:0"></i>+251 942 563 535</a>
+                  </div>
+                  <div style="font-size:12px;color:rgba(255,255,255,.7);font-family:var(--font-mono);margin-top:.5rem">HR &amp; Admin: +251 940 579 907 · +251 902 542 621 · +251 118 112 518</div>
+                </div>
+
+                <div style="padding-top:.5rem;border-top:1px solid rgba(255,255,255,.15)">
+                  <div style="font-family:var(--font-mono);font-size:11px;text-transform:uppercase;color:var(--amber)" data-en="Official Emails &amp; Telegram" data-am="ኦፊሻል ኢሜይል እና ቴሌግራም">Official Emails &amp; Telegram</div>
+                  <div style="margin-top:.375rem;font-size:12px;word-break:break-all">endriasfilmacademyplc@gmail.com</div>
+                  <div style="font-size:12px;word-break:break-all">endriasfilmcollegeplc@gmail.com</div>
+                  <div style="display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.5rem">
+                    <a href="https://t.me/endifilm" target="_blank" rel="noreferrer" style="padding:.375rem .75rem;border-radius:8px;background:var(--orange);color:var(--midnight);font-size:12px;font-weight:700">@endifilm Channel</a>
+                    <a href="https://t.me/al0254" target="_blank" rel="noreferrer" style="padding:.375rem .75rem;border-radius:8px;background:rgba(255,255,255,.15);color:#fff;font-size:12px;font-weight:600">Dean Inbox (@al0254)</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div style="background:#fff;border-radius:24px;padding:1.75rem;border:1px solid rgba(5,70,119,.12);box-shadow:var(--shadow-card);margin-top:1.5rem">
+              <div style="display:flex;align-items:center;gap:.5rem;color:var(--navy);font-weight:800;font-size:16px">
+                <i data-icon="calendar-check" style="width:20px;height:20px;color:var(--orange)"></i>
+                <span data-en="Registrar &amp; Graduation Guidelines" data-am="የምዝገባ፣ ክፍያ እና ምርቃት ደንቦች">Registrar &amp; Graduation Guidelines</span>
+              </div>
+              <ul style="list-style:none;display:flex;flex-direction:column;gap:.75rem;margin-top:1rem;font-size:13px;color:var(--muted)">
+                <li style="display:flex;gap:.5rem;align-items:flex-start">
+                  <i data-icon="check-circle-2" style="width:16px;height:16px;color:var(--navy);flex-shrink:0;margin-top:2px"></i>
+                  <span><strong style="color:var(--ink)" data-en="Monthly Tuition Window:" data-am="ወርሃዊ ክፍያ፦">Monthly Tuition Window:</strong>
+                  <span data-en="Paid between the 27th and 3rd of every Ethiopian calendar month." data-am="በየወሩ ከ27 እስከ 3 ባሉት ቀናት ውስጥ ይፈፀማል።">Paid between the 27th and 3rd of every Ethiopian calendar month.</span></span>
+                </li>
+                <li style="display:flex;gap:.5rem;align-items:flex-start">
+                  <i data-icon="check-circle-2" style="width:16px;height:16px;color:var(--navy);flex-shrink:0;margin-top:2px"></i>
+                  <span><strong style="color:var(--ink)" data-en="Graduation Film Package:" data-am="የመመረቂያ ፕሮጀክት፦">Graduation Film Package:</strong>
+                  <span data-en="Master short film + ≤1–2 min trailer + 65×94 cm framed banner poster approved prior to print." data-am="አጭር ፊልም፣ ትሬለር እና 65×94 ሴ.ሜ የተወጠረ ፖስተር ማስረከብ ይጠበቃል።">Master short film + ≤1–2 min trailer + 65×94 cm framed banner poster approved prior to print.</span></span>
+                </li>
+                <li style="display:flex;gap:.5rem;align-items:flex-start">
+                  <i data-icon="file-text" style="width:16px;height:16px;color:var(--navy);flex-shrink:0;margin-top:2px"></i>
+                  <span><strong style="color:var(--ink)" data-en="COC Competency Support:" data-am="የCOC ምዘና ድጋፍ፦">COC Competency Support:</strong>
+                  <span data-en="Free exam prep tutorials for Endrias graduates; candidates only pay the 500 ETB government COC fee." data-am="ነፃ የCOC መሰናዶ ትምህርት ይሰጣል፤ ተመዛኞች የመንግስት 500 ብር ብቻ ይከፍላሉ።">Free exam prep tutorials for Endrias graduates; candidates only pay the 500 ETB government COC fee.</span></span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Film sprocket accent divider ===== -->
+  <div class="sprocket sprocket-strip" aria-hidden="true"></div>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer cinema-grid-bg">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-lockup">
+            <img src="brand/logo-seal.png" alt="Endrias Film College Seal" />
+            <div>
+              <div class="brand-am" style="font-size:14px">እንድርያስ የፊልም ኮሌጅ ኃ.የ.የግ.ማ</div>
+              <div class="brand-en" style="font-size:18px">Endrias Film College PLC</div>
+              <div class="font-mono" style="font-size:10px;color:rgba(255,255,255,.6);margin-top:2px">EST. 2010 E.C. (2017/18) · TVET ACCREDITED</div>
+            </div>
+          </div>
+          <p data-en="“From Imagination to Screen — Let’s create the world with film art!” Addis Ababa’s dedicated accredited institution for TVET Level I–IV Filmmaking Diplomas and practical studio certificates." data-am="«ከምናባ እስከ ገቢር — በፊልም ጥበብ ዓለምን እንስራ!» በአዲስ አበባ ከተማ አስተዳደር ከደረጃ 1–4 (ዲፕሎማ) እና በአጫጭር ፕሮግራሞች ሙሉ ዕውቅና ያለው የፊልም ኮሌጅ።">“From Imagination to Screen — Let’s create the world with film art!” Addis Ababa’s dedicated accredited institution for TVET Level I–IV Filmmaking Diplomas and practical studio certificates.</p>
+          <div class="footer-accred">
+            <i data-icon="check-circle-2"></i>
+            <span data-en="AAETQAA Master Registry Row #68 &amp; Permit #32" data-am="በትምህርትና ስልጠና ጥራት ቁጥጥር ባለስልጣን ዕውቅና የተሰጠው">AAETQAA Master Registry Row #68 &amp; Permit #32</span>
+          </div>
+        </div>
+
+        <div class="footer-col footer-col-2">
+          <h3><span class="geez">፠</span> <span data-en="Conservatory" data-am="የኮሌጁ ገፆች">Conservatory</span></h3>
+          <ul>
+            <li><a href="index.html" data-en="Home" data-am="መነሻ">Home</a></li>
+            <li><a href="programs.html" data-en="Programs" data-am="ፕሮግራሞች">Programs</a></li>
+            <li><a href="about.html" data-en="About &amp; Accreditation" data-am="ስለ ኮሌጁ">About &amp; Accreditation</a></li>
+            <li><a href="faculty.html" data-en="Faculty" data-am="መምህራን">Faculty</a></li>
+            <li><a href="showcase.html" data-en="Endi Award" data-am="እንዲ አዋርድ">Endi Award</a></li>
+            <li><a href="careers.html" data-en="Careers" data-am="የስራ ትስስር">Careers</a></li>
+            <li><a href="admissions.html" data-en="Admissions" data-am="ምዝገባ">Admissions</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col footer-col-3">
+          <h3><span class="geez">፠</span> <span data-en="Academic Tiers" data-am="የትምህርት መርሃግብሮች">Academic Tiers</span></h3>
+          <ul>
+            <li><a href="programs.html" data-en="Level IV Regular Diploma (2 Yrs)" data-am="የደረጃ 4 ዲፕሎማ (እስከ 2 ዓመት)">Level IV Regular Diploma (2 Yrs)</a></li>
+            <li><a href="programs.html" data-en="+10-Month Certificate-to-Diploma Bridge" data-am="የ10 ወር ዲፕሎማ ማሳደጊያ">+10-Month Certificate-to-Diploma Bridge</a></li>
+            <li><a href="programs.html" data-en="1-Year General Filmmaking" data-am="የ1 ዓመት አጠቃላይ ፊልም አሰራር">1-Year General Filmmaking</a></li>
+            <li><a href="programs.html" data-en="9-Month Audio-Visual Track" data-am="የ9 ወር ኦዲዮ-ቪዥዋል ፕሮግራም">9-Month Audio-Visual Track</a></li>
+            <li><a href="programs.html" data-en="3-Month Dual &amp; 2-Month Digital/Summer" data-am="የ3 ወር እና የ2 ወር ዲጂታል/ክረምት">3-Month Dual &amp; 2-Month Digital/Summer</a></li>
+            <li><a href="programs.html" data-en="1-Month VIP (VFX &amp; Motion Graphics)" data-am="የ1 ወር VIP (VFX እና ሞሽን ግራፊክስ)">1-Month VIP (VFX &amp; Motion Graphics)</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col footer-col-3">
+          <h3><span class="geez">፠</span> <span data-en="4 Kilo Campus &amp; Official Hub" data-am="አድራሻ እና ኦፊሻል ገፆች">4 Kilo Campus &amp; Official Hub</span></h3>
+          <div class="footer-contact">
+            <div class="row">
+              <i data-icon="map-pin"></i>
+              <div>
+                <p style="color:#fff;font-weight:500" data-en="4 Kilo Roundabout, Next to Wekma" data-am="4 ኪሎ አደባባይ ከወክማ ጎን (ዋናው ካምፓስ)">4 Kilo Roundabout, Next to Wekma</p>
+                <p style="font-size:12px;color:rgba(255,255,255,.65);margin-top:2px" data-en="&amp; Holy Trinity University Bldg, 4th Floor · Arada Sub-City, Woreda 9" data-am="እና ቅድስት ሥላሴ ዩኒቨርሲቲ ህንፃ 4ኛ ፎቅ · አራዳ ወረዳ 9">&amp; Holy Trinity University Bldg, 4th Floor · Arada Sub-City, Woreda 9</p>
+              </div>
+            </div>
+            <div class="row">
+              <i data-icon="phone"></i>
+              <div class="mono">
+                <a href="tel:+251900003919">0900 003 919</a> / <a href="tel:+251942563535">0942 563 535</a>
+              </div>
+            </div>
+            <div class="row">
+              <i data-icon="mail"></i>
+              <a class="mono" style="font-size:12px;word-break:break-all" href="mailto:endriasfilmacademyplc@gmail.com">endriasfilmacademyplc@gmail.com</a>
+            </div>
+            <div class="social-row">
+              <a href="https://t.me/endifilm" target="_blank" rel="noreferrer">Telegram <i data-icon="arrow-up-right"></i></a>
+              <a href="https://www.tiktok.com/@endrias.film.coll" target="_blank" rel="noreferrer">TikTok <i data-icon="arrow-up-right"></i></a>
+              <a href="https://www.facebook.com/endifilm/" target="_blank" rel="noreferrer">Facebook <i data-icon="arrow-up-right"></i></a>
+              <a href="https://www.instagram.com/reel/DaN9S0PCKAj/" target="_blank" rel="noreferrer">Instagram <i data-icon="arrow-up-right"></i></a>
+              <a href="https://www.youtube.com/@endriastube2743" target="_blank" rel="noreferrer">YouTube <i data-icon="arrow-up-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="left">
+          <div class="mark"><img src="brand/logo-mark.png" alt="Endrias Emblem" /></div>
+          <span>© <span class="year">2026</span> Endrias Film College PLC (እንድርያስ የፊልም ኮሌጅ ኃ.የ.የግ.ማ). <span data-en="All rights reserved." data-am="መብቱ በህግ የተጠበቀ ነው።">All rights reserved.</span></span>
+        </div>
+        <div class="right">
+          <i data-icon="award"></i>
+          <span data-en="Sister Entity: Endrias Film Company · Zero-Commission Career Pledge" data-am="እህት ኩባንያ፦ እንድርያስ ፊልም ካምፓኒ · ነፃ የስራ ትስስር አገልግሎት">Sister Entity: Endrias Film Company · Zero-Commission Career Pledge</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/icons.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/pages/admissions.js"></script>
+</body>
+</html>

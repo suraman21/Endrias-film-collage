@@ -1,0 +1,143 @@
+    <!-- ===== Hero ===== -->
+    <section class="page-hero cinema-grid-bg" style="background:var(--midnight)">
+      <div class="container">
+        <div class="split" style="align-items:center">
+          <div class="split-8">
+            <div class="pill"><span class="geez">፠</span> <span data-en="ZERO-COMMISSION CAREER PLACEMENT" data-am="ከኮሚሽን ነፃ የስራ ትስስር ማዕከል">ZERO-COMMISSION CAREER PLACEMENT</span></div>
+            <h1 class="h1" style="margin-top:1rem" data-en="Direct Studio &amp; Broadcast Placement—With Zero Commission" data-am="ለምሩቃን እና ለቀጣሪ ተቋማት 100% ከኮሚሽን ነፃ የስራ ትስስር">Direct Studio &amp; Broadcast Placement—With Zero Commission</h1>
+            <p class="lead" style="margin-top:1rem" data-en="As a core institutional social responsibility, Endrias Film College connects its Diploma and Certificate graduates directly with TV channels, production studios, agencies, and corporate media teams across Addis Ababa without charging a single birr in commission." data-am="ኮሌጁ ለሚያመቻቻቸው ለሁሉም የስራ ትስስሮች ምንም አይነት ኮሚሽን የማይቀበል መሆኑን እያሳወቀ፣ ይህንንም እንደ አንድ ዋነኛ ማህበራዊ ኃላፊነቱ ይወስደዋል።">As a core institutional social responsibility, Endrias Film College connects its Diploma and Certificate graduates directly with TV channels, production studios, agencies, and corporate media teams across Addis Ababa without charging a single birr in commission.</p>
+          </div>
+          <div class="split-4">
+            <div style="padding:1.5rem;border-radius:24px;background:var(--navy-dark);border:1px solid rgba(255,144,0,.4);display:flex;flex-direction:column;gap:.75rem">
+              <div style="display:flex;align-items:center;gap:.625rem;color:var(--orange);font-family:var(--font-mono);font-size:11px;font-weight:700">
+                <i data-icon="shield-check" style="width:20px;height:20px"></i>OFFICIAL ZERO-FEE PLEDGE
+              </div>
+              <p class="font-ethiopic" style="font-size:14px;color:rgba(255,255,255,.9);line-height:1.7">«ኮሌጁ ለሚያመቻቻቸው ለሁሉም የስራ ትስስሮች ምንም አይነት ኮሚሽን የማይቀበል መሆኑን እያሳወቅን ይልቁንም እንደ አንድ ማህበራዊ ኃላፊነቱ ይወስደዋል።»</p>
+              <div style="font-family:var(--font-mono);font-size:11px;color:rgba(255,255,255,.6)">Placement Desks: @efcfilm · @al0254</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 1: Placement pipeline board ===== -->
+    <section class="section ivory-grid-bg">
+      <div class="container">
+        <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:1rem">
+          <div>
+            <div class="eyebrow"><i data-icon="briefcase" style="width:16px;height:16px;color:var(--orange)"></i> <span data-en="Verified Alumni Placement Tracks" data-am="ተደጋጋሚ የስራ ዕድል መስኮች">Verified Alumni Placement Tracks</span></div>
+            <h2 class="h2" style="color:var(--ink);margin-top:.375rem" data-en="Active Industry Placement Categories in Addis Ababa" data-am="በአዲስ አበባ ለምሩቃን የሚመቻቹ የስራ መደቦች">Active Industry Placement Categories in Addis Ababa</h2>
+          </div>
+          <div class="pill-row no-scrollbar" id="job-filters"></div>
+        </div>
+        <div class="grid-2" id="job-grid" style="margin-top:2rem"></div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 2: Dual placement & employer portal ===== -->
+    <section class="section panel-sand">
+      <div class="container" style="max-width:56rem">
+        <div style="text-align:center">
+          <h2 class="h2" style="color:var(--ink)" data-en="Alumni Talent Desk &amp; Employer Crew Request Portal" data-am="የምሩቃን የስራ መመዝገቢያ እና የቀጣሪ ድርጅቶች መጠየቂያ ቅጽ">Alumni Talent Desk &amp; Employer Crew Request Portal</h2>
+          <p style="font-size:14px;color:var(--muted);margin-top:.5rem" data-en="Prepare a structured placement dispatch for immediate review by our Career Office (@efcfilm / @al0254)." data-am="መረጃዎን በመሙላት ለኮሌጁ የስራ ትስስር ክፍል (@efcfilm / @al0254) በቀጥታ ይላኩ።">Prepare a structured placement dispatch for immediate review by our Career Office (@efcfilm / @al0254).</p>
+        </div>
+
+        <div style="background:#fff;border-radius:24px;border:1px solid rgba(5,70,119,.15);box-shadow:var(--shadow-card);overflow:hidden;margin-top:2rem">
+          <div class="tabs-2">
+            <button type="button" id="tab-alumni" class="active">
+              <i data-icon="users"></i>
+              <span data-en="I Am an Endrias Graduate" data-am="የኮሌጁ ምሩቅ ነኝ (ስራ ፈላጊ)">I Am an Endrias Graduate</span>
+            </button>
+            <button type="button" id="tab-employer">
+              <i data-icon="building-2"></i>
+              <span data-en="Hire Endrias Crew (0% Fee)" data-am="ባለሙያ እፈልጋለሁ (ቀጣሪ ድርጅት)">Hire Endrias Crew (0% Fee)</span>
+            </button>
+          </div>
+
+          <div style="padding:2rem">
+            <!-- Alumni form -->
+            <form id="form-alumni" class="form-stack">
+              <div class="form-grid">
+                <div class="field">
+                  <label data-en="Full Name *" data-am="ሙሉ ስም *">Full Name *</label>
+                  <input required type="text" id="alumni-name" data-en-ph="e.g. Abenezer Zenebe" data-am-ph="ለምሳሌ፦ አቤኔዘር ዘነበ" placeholder="e.g. Abenezer Zenebe" />
+                </div>
+                <div class="field">
+                  <label data-en="Phone / Telegram Number *" data-am="ስልክ ቁጥር *">Phone / Telegram Number *</label>
+                  <input required type="tel" id="alumni-phone" placeholder="09..." />
+                </div>
+              </div>
+              <div class="form-grid">
+                <div class="field">
+                  <label data-en="Completed Program Track" data-am="ያጠናቀቁት የትምህርት ፕሮግራም">Completed Program Track</label>
+                  <select id="alumni-track">
+                    <option>Level IV Regular Diploma</option>
+                    <option>1-Year General Filmmaking Certificate</option>
+                    <option>9-Month Audio-Visual Certificate</option>
+                    <option>3-Month / 2-Month Specialized Track</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label data-en="Primary Specialization" data-am="የሚፈልጉት የስራ መስክ">Primary Specialization</label>
+                  <input required type="text" id="alumni-role" value="Video Editor &amp; Cinematographer" />
+                </div>
+              </div>
+              <div class="field">
+                <label data-en="Showreel Link or Key Skills Summary" data-am="የሰሩት ፊልም / ፖርትፎሊዮ ሊንክ ወይም አጭር መግለጫ">Showreel Link or Key Skills Summary</label>
+                <textarea rows="3" id="alumni-portfolio" data-en-ph="Share Premiere/DaVinci proficiency, graduation short film role, or drive link..." data-am-ph="ስለ ችሎታዎ ወይም የመመረቂያ ፊልምዎ አጭር ማብራሪያ ይፃፉ..." placeholder="Share Premiere/DaVinci proficiency, graduation short film role, or drive link..."></textarea>
+              </div>
+              <button type="submit" class="btn btn-orange btn-block" data-en="Generate Placement Dispatch" data-am="የስራ ትስስር ማመልከቻ አዘጋጅ">Generate Placement Dispatch</button>
+            </form>
+
+            <!-- Employer form -->
+            <form id="form-employer" class="form-stack" hidden>
+              <div class="form-grid">
+                <div class="field">
+                  <label data-en="Production House / Company Name *" data-am="የድርጅቱ / ፕሮዳክሽኑ ስም *">Production House / Company Name *</label>
+                  <input required type="text" id="company-name" data-en-ph="Studio, TV Channel, Agency or NGO" data-am-ph="የድርጅት ስም" placeholder="Studio, TV Channel, Agency or NGO" />
+                </div>
+                <div class="field">
+                  <label data-en="Hiring Manager Phone *" data-am="የስልክ ቁጥር *">Hiring Manager Phone *</label>
+                  <input required type="tel" id="company-contact" placeholder="09..." />
+                </div>
+              </div>
+              <div style="display:grid;grid-template-columns:1fr;gap:1rem" class="form-grid">
+                <div class="field" style="grid-column:span 1">
+                  <label data-en="Crew Role(s) Needed *" data-am="የሚፈለገው የባለሙያ አይነት *">Crew Role(s) Needed *</label>
+                  <input required type="text" id="crew-role" value="Cinematographer &amp; Video Editor" />
+                </div>
+                <div class="field">
+                  <label data-en="Headcount" data-am="ብዛት">Headcount</label>
+                  <input required type="number" min="1" max="30" id="crew-count" value="2" />
+                </div>
+              </div>
+              <div class="field">
+                <label data-en="Workplace District in Addis Ababa" data-am="የስራ ቦታ አድራሻ">Workplace District in Addis Ababa</label>
+                <input required type="text" id="company-district" value="Bole, Addis Ababa" />
+              </div>
+              <button type="submit" class="btn btn-navy btn-block" data-en="Prepare Zero-Commission Crew Request" data-am="ከኮሚሽን ነፃ የባለሙያ ጥያቄ አዘጋጅ">Prepare Zero-Commission Crew Request</button>
+            </form>
+
+            <!-- Generated dispatch -->
+            <div id="dispatch-box" hidden style="margin-top:1.5rem;padding:1.25rem;border-radius:16px;background:var(--ivory);border:1px solid rgba(255,144,0,.5)">
+              <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.5rem">
+                <span style="font-family:var(--font-mono);font-size:11px;font-weight:700;color:var(--navy)" data-en="DISPATCH READY FOR @efcfilm / @al0254" data-am="መልዕክቱ ተዘጋጅቷል">DISPATCH READY FOR @efcfilm / @al0254</span>
+                <button type="button" class="copy-btn" id="copy-dispatch">
+                  <i data-icon="copy"></i><span data-en="Copy Text" data-am="ጽሑፉን ቅዳ">Copy Text</span>
+                </button>
+              </div>
+              <pre id="dispatch-text" style="margin-top:.75rem"></pre>
+              <div style="display:flex;flex-wrap:wrap;gap:.625rem;margin-top:.75rem">
+                <a class="btn btn-navy btn-sm" href="https://t.me/efcfilm" target="_blank" rel="noreferrer">
+                  <i data-icon="send" style="color:var(--orange)"></i>
+                  <span data-en="Open @efcfilm Placement Desk" data-am="ወደ @efcfilm ላክ">Open @efcfilm Placement Desk</span>
+                </a>
+                <a class="btn btn-orange btn-sm" id="mail-dispatch" href="#">
+                  <span data-en="Send via Official Email" data-am="በኢሜይል ላክ">Send via Official Email</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>

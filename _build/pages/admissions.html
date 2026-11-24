@@ -1,0 +1,167 @@
+    <!-- ===== Page hero ===== -->
+    <section class="page-hero cinema-grid-bg">
+      <div class="container">
+        <div style="max-width:48rem">
+          <div class="pill"><span class="geez">፠</span> <span data-en="2019 E.C. ADMISSIONS &amp; 4 KILO CAMPUS" data-am="የ2019 ዓ.ም ምዝገባ እና አድራሻ">2019 E.C. ADMISSIONS &amp; 4 KILO CAMPUS</span></div>
+          <h1 class="h1" style="margin-top:1rem" data-en="Begin Your Cinema Journey at 4 Kilo Roundabout" data-am="የ2019 ዓ.ም የፊልም ጥበብ ምዝገባዎን ዛሬውኑ ይጀምሩ">Begin Your Cinema Journey at 4 Kilo Roundabout</h1>
+          <p class="lead" style="margin-top:1rem" data-en="Complete your online pre-registration slip below or visit our 4 Kilo Main Campus (next to Wekma &amp; Holy Trinity University 4th Floor) to tour our studios and finalize your shift." data-am="የቅድመ-ምዝገባ ቅጹን ከታች ይሙሉ ወይም 4 ኪሎ አደባባይ ከወክማ ጎን (እና ቅድስት ሥላሴ ዩኒቨርሲቲ 4ኛ ፎቅ) በሚገኘው ካምፓሳችን በአካል በመገኘት ይመዝገቡ።">Complete your online pre-registration slip below or visit our 4 Kilo Main Campus (next to Wekma &amp; Holy Trinity University 4th Floor) to tour our studios and finalize your shift.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 1: Pre-registration form + campus directory ===== -->
+    <section class="section ivory-grid-bg">
+      <div class="container">
+        <div class="split" style="align-items:start">
+          <!-- Left: pre-registration builder -->
+          <div class="split-7">
+            <div style="background:#fff;border-radius:24px;border:1px solid rgba(5,70,119,.15);box-shadow:var(--shadow-card);padding:2rem">
+              <div style="display:flex;align-items:center;justify-content:space-between;gap:.75rem;padding-bottom:1rem;border-bottom:1px solid rgba(5,70,119,.1)">
+                <div>
+                  <div style="font-family:var(--font-mono);font-size:11px;text-transform:uppercase;color:var(--orange-hover);font-weight:700" data-en="Step 1 · Student Pre-Registration" data-am="ደረጃ 1 · የቅድመ-ምዝገባ ቅጽ">Step 1 · Student Pre-Registration</div>
+                  <h2 style="font-size:22px;font-weight:800;color:var(--ink);margin-top:2px" data-en="Generate Your Admission &amp; Shift Slip" data-am="የመመዝገቢያና የፈረቃ ምርጫ ቅጽ">Generate Your Admission &amp; Shift Slip</h2>
+                </div>
+                <img src="brand/logo-seal.png" alt="Endrias Seal" style="width:48px;height:48px;border-radius:50%;flex-shrink:0" />
+              </div>
+
+              <form id="admission-form" class="form-stack" style="margin-top:1.5rem">
+                <div class="form-grid">
+                  <div class="field">
+                    <label data-en="Applicant Full Name *" data-am="ሙሉ ስም *">Applicant Full Name *</label>
+                    <input required type="text" id="f-name" data-en-ph="Enter your full name" data-am-ph="ሙሉ ስምዎን ያስገቡ" placeholder="Enter your full name" />
+                  </div>
+                  <div class="field">
+                    <label data-en="Phone Number *" data-am="ስልክ ቁጥር *">Phone Number *</label>
+                    <input required type="tel" id="f-phone" placeholder="09... / +251..." />
+                  </div>
+                </div>
+                <div class="form-grid">
+                  <div class="field">
+                    <label data-en="Email Address (Optional)" data-am="ኢሜይል (ካለዎት)">Email Address (Optional)</label>
+                    <input type="email" id="f-email" placeholder="you@example.com" />
+                  </div>
+                  <div class="field">
+                    <label data-en="Prior Education / Certificate" data-am="የትምህርት ዝግጅት">Prior Education / Certificate</label>
+                    <select id="f-education">
+                      <option>Grade 10 / 12 Complete</option>
+                      <option>1-Year Filmmaking Certificate (+10-Mo Diploma Bridge)</option>
+                      <option>University / College Student or Graduate</option>
+                      <option>Working Media Professional / Content Creator</option>
+                      <option>Youth / Kiremt Talent Trainee</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="field">
+                  <label data-en="Select Academic Program Tier *" data-am="የትምህርት ፕሮግራም ይምረጡ *">Select Academic Program Tier *</label>
+                  <select id="f-program" style="font-weight:600"></select>
+                </div>
+                <div class="field">
+                  <label data-en="Preferred 2-Hour Daily Shift *" data-am="የሚመርጡት የመማሪያ ፈረቃ *">Preferred 2-Hour Daily Shift *</label>
+                  <select id="f-shift"></select>
+                </div>
+                <div class="field">
+                  <label data-en="Chosen Courses (for 3-Month / 1-Month VIP) or Questions" data-am="የመረጧቸው ኮርሶች (ለ3 ወር / ለ1 ወር VIP) ወይም ተጨማሪ ጥያቄ">Chosen Courses (for 3-Month / 1-Month VIP) or Questions</label>
+                  <textarea rows="3" id="f-notes" data-en-ph="e.g. Interested in Cinematography + Video Editing, or VFX 1-on-1 VIP class..." data-am-ph="ለምሳሌ፦ ሲኒማቶግራፊ እና ኤዲቲንግ፣ ወይም የግል VFX ስልጠና..." placeholder="e.g. Interested in Cinematography + Video Editing, or VFX 1-on-1 VIP class..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-orange btn-block" style="padding:1rem" data-en="Generate Official Pre-Registration Slip" data-am="የቅድመ-ምዝገባ ካርድ አዘጋጅ">Generate Official Pre-Registration Slip</button>
+              </form>
+
+              <!-- Generated slip -->
+              <div id="slip" class="slip" hidden style="margin-top:1.5rem">
+                <div class="slip-head">
+                  <div>
+                    <div class="lbl" data-en="PRE-REGISTRATION REFERENCE" data-am="የቅድመ-ምዝገባ ማጣቀሻ">PRE-REGISTRATION REFERENCE</div>
+                    <div class="code" id="slip-code">EFC-2019-0000</div>
+                  </div>
+                  <div class="slip-actions">
+                    <button type="button" id="slip-copy"><i data-icon="copy"></i><span data-en="Copy" data-am="ቅዳ">Copy</span></button>
+                    <button type="button" id="slip-print"><i data-icon="printer"></i><span data-en="Print" data-am="ፕሪንት">Print</span></button>
+                  </div>
+                </div>
+                <pre id="slip-text"></pre>
+                <div style="display:flex;flex-wrap:wrap;gap:.75rem;padding-top:.75rem">
+                  <a class="btn btn-orange btn-sm" href="https://t.me/al0254" target="_blank" rel="noreferrer">
+                    <i data-icon="send"></i>
+                    <span data-en="Send Slip to Registrar (@al0254)" data-am="ለሬጅስትራር (@al0254) በቴሌግራም ላክ">Send Slip to Registrar (@al0254)</span>
+                  </a>
+                  <a class="btn btn-white-ghost btn-sm" id="slip-mail" href="#">
+                    <i data-icon="mail" style="color:var(--orange)"></i>
+                    <span data-en="Submit via Email" data-am="በኢሜይል ላክ">Submit via Email</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: campus directory + guidelines -->
+          <div class="split-5">
+            <div style="background:var(--navy);color:#fff;border-radius:24px;padding:2rem;box-shadow:var(--shadow-cinema)">
+              <div style="font-family:var(--font-mono);font-size:11px;text-transform:uppercase;color:var(--amber);font-weight:700" data-en="Campus &amp; Registrar Directory" data-am="የካምፓስ አድራሻ እና ስልኮች">Campus &amp; Registrar Directory</div>
+              <h3 class="h3" style="margin-top:.25rem" data-en="Visit Us at 4 Kilo Roundabout" data-am="4 ኪሎ አደባባይ በአካል ያግኙን">Visit Us at 4 Kilo Roundabout</h3>
+
+              <div style="margin-top:1.25rem;display:flex;flex-direction:column;gap:1rem;font-size:14px">
+                <div style="padding:1rem;border-radius:16px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.1)">
+                  <div style="display:flex;align-items:center;gap:.5rem;font-weight:700;color:var(--amber)">
+                    <i data-icon="map-pin" style="width:16px;height:16px;color:var(--orange);flex-shrink:0"></i>
+                    <span data-en="Main Campus (ዋናው ካምፓስ)" data-am="ዋናው ካምፓስ">Main Campus (ዋናው ካምፓስ)</span>
+                  </div>
+                  <p style="color:rgba(255,255,255,.9);font-size:13px;line-height:1.7;margin-top:.25rem" data-en="4 Kilo Roundabout, Next to Wekma (Main Campus), Arada Sub-City, Woreda 9, Addis Ababa" data-am="4 ኪሎ አደባባይ ከወክማ ጎን (ዋናው ካምፓስ)፣ አራዳ ክፍለ ከተማ ወረዳ 9፣ አዲስ አበባ">4 Kilo Roundabout, Next to Wekma (Main Campus), Arada Sub-City, Woreda 9, Addis Ababa</p>
+                </div>
+                <div style="padding:1rem;border-radius:16px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.1)">
+                  <div style="display:flex;align-items:center;gap:.5rem;font-weight:700;color:var(--amber)">
+                    <i data-icon="map-pin" style="width:16px;height:16px;color:var(--orange);flex-shrink:0"></i>
+                    <span data-en="Holy Trinity Building Studio Hall" data-am="ቅድስት ሥላሴ ዩኒቨርሲቲ ህንፃ">Holy Trinity Building Studio Hall</span>
+                  </div>
+                  <p style="color:rgba(255,255,255,.9);font-size:13px;line-height:1.7;margin-top:.25rem" data-en="4 Kilo Roundabout, Holy Trinity University Building, 4th Floor Terrace, Addis Ababa" data-am="4 ኪሎ አደባባይ ቅድስት ሥላሴ ዩኒቨርሲቲ ህንፃ 4ኛ ፎቅ (ቴራስ ላይ)፣ አዲስ አበባ">4 Kilo Roundabout, Holy Trinity University Building, 4th Floor Terrace, Addis Ababa</p>
+                </div>
+
+                <div>
+                  <div style="font-family:var(--font-mono);font-size:11px;text-transform:uppercase;color:var(--amber)" data-en="Direct Admissions Hotlines" data-am="ቀጥታ የምዝገባ ስልክ መስመሮች">Direct Admissions Hotlines</div>
+                  <div style="display:grid;grid-template-columns:1fr 1fr;gap:.625rem;margin-top:.5rem">
+                    <a href="tel:+251900003919" style="padding:.75rem;border-radius:12px;background:rgba(3,21,37,.7);border:1px solid rgba(255,255,255,.15);font-family:var(--font-mono);font-size:13px;font-weight:700;display:flex;align-items:center;gap:.5rem">
+                      <i data-icon="phone" style="width:16px;height:16px;color:var(--orange);flex-shrink:0"></i>+251 900 003 919</a>
+                    <a href="tel:+251942563535" style="padding:.75rem;border-radius:12px;background:rgba(3,21,37,.7);border:1px solid rgba(255,255,255,.15);font-family:var(--font-mono);font-size:13px;font-weight:700;display:flex;align-items:center;gap:.5rem">
+                      <i data-icon="phone" style="width:16px;height:16px;color:var(--orange);flex-shrink:0"></i>+251 942 563 535</a>
+                  </div>
+                  <div style="font-size:12px;color:rgba(255,255,255,.7);font-family:var(--font-mono);margin-top:.5rem">HR &amp; Admin: +251 940 579 907 · +251 902 542 621 · +251 118 112 518</div>
+                </div>
+
+                <div style="padding-top:.5rem;border-top:1px solid rgba(255,255,255,.15)">
+                  <div style="font-family:var(--font-mono);font-size:11px;text-transform:uppercase;color:var(--amber)" data-en="Official Emails &amp; Telegram" data-am="ኦፊሻል ኢሜይል እና ቴሌግራም">Official Emails &amp; Telegram</div>
+                  <div style="margin-top:.375rem;font-size:12px;word-break:break-all">endriasfilmacademyplc@gmail.com</div>
+                  <div style="font-size:12px;word-break:break-all">endriasfilmcollegeplc@gmail.com</div>
+                  <div style="display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.5rem">
+                    <a href="https://t.me/endifilm" target="_blank" rel="noreferrer" style="padding:.375rem .75rem;border-radius:8px;background:var(--orange);color:var(--midnight);font-size:12px;font-weight:700">@endifilm Channel</a>
+                    <a href="https://t.me/al0254" target="_blank" rel="noreferrer" style="padding:.375rem .75rem;border-radius:8px;background:rgba(255,255,255,.15);color:#fff;font-size:12px;font-weight:600">Dean Inbox (@al0254)</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div style="background:#fff;border-radius:24px;padding:1.75rem;border:1px solid rgba(5,70,119,.12);box-shadow:var(--shadow-card);margin-top:1.5rem">
+              <div style="display:flex;align-items:center;gap:.5rem;color:var(--navy);font-weight:800;font-size:16px">
+                <i data-icon="calendar-check" style="width:20px;height:20px;color:var(--orange)"></i>
+                <span data-en="Registrar &amp; Graduation Guidelines" data-am="የምዝገባ፣ ክፍያ እና ምርቃት ደንቦች">Registrar &amp; Graduation Guidelines</span>
+              </div>
+              <ul style="list-style:none;display:flex;flex-direction:column;gap:.75rem;margin-top:1rem;font-size:13px;color:var(--muted)">
+                <li style="display:flex;gap:.5rem;align-items:flex-start">
+                  <i data-icon="check-circle-2" style="width:16px;height:16px;color:var(--navy);flex-shrink:0;margin-top:2px"></i>
+                  <span><strong style="color:var(--ink)" data-en="Monthly Tuition Window:" data-am="ወርሃዊ ክፍያ፦">Monthly Tuition Window:</strong>
+                  <span data-en="Paid between the 27th and 3rd of every Ethiopian calendar month." data-am="በየወሩ ከ27 እስከ 3 ባሉት ቀናት ውስጥ ይፈፀማል።">Paid between the 27th and 3rd of every Ethiopian calendar month.</span></span>
+                </li>
+                <li style="display:flex;gap:.5rem;align-items:flex-start">
+                  <i data-icon="check-circle-2" style="width:16px;height:16px;color:var(--navy);flex-shrink:0;margin-top:2px"></i>
+                  <span><strong style="color:var(--ink)" data-en="Graduation Film Package:" data-am="የመመረቂያ ፕሮጀክት፦">Graduation Film Package:</strong>
+                  <span data-en="Master short film + ≤1–2 min trailer + 65×94 cm framed banner poster approved prior to print." data-am="አጭር ፊልም፣ ትሬለር እና 65×94 ሴ.ሜ የተወጠረ ፖስተር ማስረከብ ይጠበቃል።">Master short film + ≤1–2 min trailer + 65×94 cm framed banner poster approved prior to print.</span></span>
+                </li>
+                <li style="display:flex;gap:.5rem;align-items:flex-start">
+                  <i data-icon="file-text" style="width:16px;height:16px;color:var(--navy);flex-shrink:0;margin-top:2px"></i>
+                  <span><strong style="color:var(--ink)" data-en="COC Competency Support:" data-am="የCOC ምዘና ድጋፍ፦">COC Competency Support:</strong>
+                  <span data-en="Free exam prep tutorials for Endrias graduates; candidates only pay the 500 ETB government COC fee." data-am="ነፃ የCOC መሰናዶ ትምህርት ይሰጣል፤ ተመዛኞች የመንግስት 500 ብር ብቻ ይከፍላሉ።">Free exam prep tutorials for Endrias graduates; candidates only pay the 500 ETB government COC fee.</span></span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
