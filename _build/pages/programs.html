@@ -1,0 +1,99 @@
+    <!-- ===== Page hero ===== -->
+    <section class="page-hero cinema-grid-bg">
+      <div class="container">
+        <div style="max-width:48rem">
+          <div class="pill"><span class="geez">፠</span> <span data-en="ACADEMIC PROGRAMS &amp; SYLLABUS" data-am="የትምህርት ፕሮግራሞች እና ኮርሶች">ACADEMIC PROGRAMS &amp; SYLLABUS</span></div>
+          <h1 class="h1" style="margin-top:1rem" data-en="From 1-Month VIP Classes to Accredited Level IV Diplomas" data-am="ከ1 ወር የግል ስልጠና እስከ ደረጃ 4 (ዲፕሎማ) የትምህርት ፕሮግራሞች">From 1-Month VIP Classes to Accredited Level IV Diplomas</h1>
+          <p class="lead" style="margin-top:1rem" data-en="Every regular track at Endrias Film College now integrates Social &amp; Digital Media Management, Graphics Design, AI for Filmmaking, and Professional Portfolio Branding." data-am="በሁሉም መደበኛ ፕሮግራሞቻችን ላይ የሶሻል ሚዲያ ማኔጅመንት፣ ግራፊክስ ዲዛይን፣ AI ለፊልም ስራ እና ፕሮፌሽናል ፖርትፎሊዮ ብራንዲንግ ተካትተዋል።">Every regular track at Endrias Film College now integrates Social &amp; Digital Media Management, Graphics Design, AI for Filmmaking, and Professional Portfolio Branding.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 1: Program tiers + filter pills ===== -->
+    <section class="section ivory-grid-bg">
+      <div class="container">
+        <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:1rem">
+          <h2 class="h2" style="color:var(--ink)" data-en="6 Official Program Tiers" data-am="6ቱ የትምህርት ደረጃዎችና መርሃግብሮች">6 Official Program Tiers</h2>
+          <div class="pill-row no-scrollbar" id="tier-filters"></div>
+        </div>
+
+        <div id="tier-list" style="display:flex;flex-direction:column;gap:1.5rem;margin-top:2rem"></div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 2: Interactive track & shift recommender ===== -->
+    <section class="section panel-dark">
+      <div class="container">
+        <div class="recommender">
+          <div class="split" style="align-items:center">
+            <div class="split-7">
+              <div class="eyebrow on-dark" style="margin-bottom:.5rem"><i data-icon="compass" style="width:16px;height:16px"></i> <span data-en="Interactive Study Planner" data-am="የፕሮግራም እና የፈረቃ መምረጫ አጋዥ">Interactive Study Planner</span></div>
+              <h2 class="h2" data-en="Not Sure Which Track Fits Your Goal?" data-am="የትኛው የትምህርት መርሃግብር እንደሚስማማዎት ይምረጡ">Not Sure Which Track Fits Your Goal?</h2>
+
+              <div style="margin-top:1.5rem">
+                <label style="display:block;font-family:var(--font-mono);font-size:11px;text-transform:uppercase;color:rgba(255,255,255,.7);margin-bottom:.5rem">1. <span data-en="Select Your Primary Creative Goal" data-am="ዋና ዓላማዎን ይምረጡ">Select Your Primary Creative Goal</span></label>
+                <div class="goal-grid" id="goal-grid"></div>
+              </div>
+
+              <div style="margin-top:1.25rem">
+                <label style="display:block;font-family:var(--font-mono);font-size:11px;text-transform:uppercase;color:rgba(255,255,255,.7);margin-bottom:.5rem">2. <span data-en="Choose Your Preferred Daily Shift" data-am="የሚመችዎትን የመማሪያ ፈረቃ ይምረጡ">Choose Your Preferred Daily Shift</span></label>
+                <div class="shift-pick" id="shift-pick"></div>
+              </div>
+            </div>
+
+            <div class="split-5">
+              <div class="result-card">
+                <div style="display:flex;align-items:center;justify-content:space-between;gap:.5rem">
+                  <span style="font-family:var(--font-mono);font-size:11px;text-transform:uppercase;color:var(--orange);font-weight:700" data-en="Recommended Study Plan" data-am="ለእርስዎ የተመረጠ መርሃግብር">Recommended Study Plan</span>
+                  <span class="badge" style="background:rgba(255,144,0,.2);color:var(--orange)" id="rec-code">TVET LVL I–IV</span>
+                </div>
+                <h3 style="font-size:22px;font-weight:800;color:#fff;margin-top:.75rem" id="rec-title"></h3>
+                <div class="rows" style="margin-top:1rem" id="rec-rows"></div>
+                <p style="font-size:12px;color:rgba(255,255,255,.75);line-height:1.7;margin-top:.75rem" id="rec-pathway"></p>
+                <a class="btn btn-orange btn-block" style="margin-top:1rem" id="rec-cta" href="admissions.html">
+                  <span data-en="Continue to Pre-Registration Slip" data-am="በዚህ ምርጫ ቅድመ-ምዝገባ ይቀጥሉ">Continue to Pre-Registration Slip</span>
+                  <i data-icon="arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 3: Searchable course catalog ===== -->
+    <section class="section" style="background:var(--ivory)">
+      <div class="container">
+        <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:1.5rem">
+          <div>
+            <div class="eyebrow"><i data-icon="book-open" style="width:16px;height:16px;color:var(--orange)"></i> <span data-en="Complete Conservatory Syllabus" data-am="ዝርዝር የኮርሶች ካታሎግ">Complete Conservatory Syllabus</span></div>
+            <h2 class="h2" style="color:var(--ink);margin-top:.375rem" data-en="Explore All Core, Diploma &amp; VIP Modules" data-am="ሁሉንም የፊልምና ዲጂታል ኮርሶች ይመርምሩ">Explore All Core, Diploma &amp; VIP Modules</h2>
+          </div>
+          <div class="search-wrap">
+            <i data-icon="search"></i>
+            <input type="text" id="module-search" data-en-ph="Search courses, tools (e.g. DaVinci, AI)..." data-am-ph="ኮርስ ወይም ሶፍትዌር ይፈልጉ..." placeholder="Search courses, tools (e.g. DaVinci, AI)..." />
+          </div>
+        </div>
+
+        <div class="pill-row no-scrollbar" style="margin-top:2rem">
+          <i data-icon="filter" style="width:16px;height:16px;color:var(--navy);flex-shrink:0;margin-right:.25rem"></i>
+          <div class="pill-row no-scrollbar" id="discipline-filters" style="padding:0"></div>
+        </div>
+
+        <div class="grid-3" id="module-grid" style="margin-top:2rem;gap:1.25rem"></div>
+
+        <div style="border-radius:24px;background:var(--sand);border:1px solid rgba(5,70,119,.15);padding:2rem;margin-top:2rem;display:grid;grid-template-columns:1fr;gap:1.5rem;align-items:center">
+          <div>
+            <div style="font-family:var(--font-mono);font-size:11px;text-transform:uppercase;font-weight:700;color:var(--navy)" data-en="National Competency (COC) &amp; +10-Month Bridging" data-am="የCOC ምዘና ዝግጅት እና የ10 ወር ዲፕሎማ ማሳደጊያ">National Competency (COC) &amp; +10-Month Bridging</div>
+            <h3 style="font-size:24px;font-weight:800;color:var(--ink);margin-top:.375rem" data-en="Already Hold a 1-Year Filmmaking Certificate? Upgrade to a Level IV Diploma in 10 Months." data-am="ከእኛ ወይም ከሌላ ተቋም የ1 ዓመት ፊልም ሰርተፍኬት አለዎት? በ10 ወር ብቻ ወደ ደረጃ 4 ዲፕሎማ ያሳድጉ!">Already Hold a 1-Year Filmmaking Certificate? Upgrade to a Level IV Diploma in 10 Months.</h3>
+            <p style="font-size:14px;color:var(--muted);line-height:1.7;margin-top:.625rem" data-en="Endrias Film College also provides free theoretical and practical COC exam preparation sessions for its alumni—students pay only the official 500 ETB government assessment fee with zero college markup." data-am="ኮሌጁ ተማሪዎቹ ለመንግስት የብቃት ምዘና (COC) ሲቀርቡ ነፃ የተግባርና የንድፈ-ሀሳብ ዝግጅት ያደርግላቸዋል፤ ተመዛኞች የሚከፍሉት የመንግስት የምዘና ክፍያ (500 ብር) ብቻ ነው።">Endrias Film College also provides free theoretical and practical COC exam preparation sessions for its alumni—students pay only the official 500 ETB government assessment fee with zero college markup.</p>
+          </div>
+          <div>
+            <a class="btn btn-navy" href="admissions.html?program=level-4-diploma">
+              <span data-en="Inquire About Diploma Bridge" data-am="ስለ ዲፕሎማ ማሳደጊያ ይጠይቁ">Inquire About Diploma Bridge</span>
+              <i data-icon="arrow-right" style="color:var(--orange)"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
