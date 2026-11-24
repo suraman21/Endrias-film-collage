@@ -81,6 +81,12 @@ npx serve .
 Deploy by uploading the folder as-is to Netlify / Vercel / GitHub Pages / cPanel —
 there is no server-side code.
 
+`vercel.json` in the repo root turns the deployment into a plain static site: no
+framework, no install, no build, serve the repo root. `cleanUrls` also keeps the
+original React URLs working (`/programs`, `/about`, `/faculty`, `/showcase`,
+`/careers`, `/admissions`) instead of exposing `*.html`, so old links and search
+results do not break.
+
 ## Notes
 
 - Fonts load from Google Fonts (`<link>` in the head). Offline they fall back to
